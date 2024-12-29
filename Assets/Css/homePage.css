@@ -27,14 +27,9 @@ nav .nav-menu ul li a {
 }
 
 nav .nav-icons i {
-    font-size: 18px;
+    font-size: 19px;
     cursor: pointer;
     padding: 5px;
-    transition: all 0.4s;
-}
-
-nav .nav-icons i:hover {
-    transform: rotate(360deg);
 }
 
 .side-nav-menu {
@@ -68,6 +63,22 @@ nav .nav-icons i:hover {
 #nav-bar {
     display: none;
 }
+
+/* For Cart */
+
+nav .nav-icons span {
+    top: 55%;
+    left: 60%;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    align-content: center;
+    text-align: center;
+}
+
+/* For Cart */
 
 /* For Navbar */
 
@@ -295,6 +306,16 @@ nav .nav-icons i:hover {
     font-size: 17px;
 }
 
+.product-section-content-row-2 {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s linear;
+}
+
+.product-section-content-row-2-open {
+    max-height: 100%;
+}
+
 /* For product-section  */
 
 @media (max-width:550px) {
@@ -314,6 +335,13 @@ nav .nav-icons i:hover {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+}
+
+@media (max-width:425px) {
+    .product-card .card-bottom {
+        padding: 0;
+        flex-wrap: wrap;
     }
 }
 
@@ -453,9 +481,10 @@ footer {
 /* For footer */
 
 @media (max-width:550px) {
+
     .footer-content-1,
     .footer-content-2,
-    .footer-content-3{
+    .footer-content-3 {
         align-items: center;
         text-align: center;
     }
@@ -464,11 +493,3 @@ footer {
 /* For footer */
 
 /* footer end */
-
-/* bottom-to-top-btn */
-
-.bottom-to-top-btn{
-  
-}
-
-/* bottom-to-top-btn */

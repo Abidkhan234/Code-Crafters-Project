@@ -16,6 +16,44 @@ navCross.addEventListener("click", () => {
 
 // For Navbar
 
+// For Cart Count
+
+const itemCount = document.getElementById("item-count");
+
+const additemBtn = document.querySelectorAll(".add-item");
+
+let itemCounter = 0;
+
+const incrementingCount = () => {
+    itemCounter++;
+
+    itemCount.innerText = itemCounter;
+};
+
+additemBtn.forEach((value) => {
+    value.addEventListener("click", incrementingCount)
+});
+
+// For Cart Count
+
+// For Product Section
+
+const productsRowTwo = document.querySelector(".product-section-content-row-2");
+
+const productBtn = document.getElementById("showMoreProductBtn");
+
+productBtn.addEventListener("click", () => {
+    if (productsRowTwo.classList.contains("product-section-content-row-2-open")) {
+        productsRowTwo.classList.remove("product-section-content-row-2-open");
+        productBtn.innerText = "Show More"; 
+    } else {
+        productsRowTwo.classList.add("product-section-content-row-2-open");
+        productBtn.innerText = "Show Less";
+    }
+});
+
+// For Product Section
+
 // For Insperation-section 
 
 // Ins-section-slider
@@ -62,4 +100,3 @@ insPre.addEventListener("click", () => {
 // Ins-section-slider
 
 // For Insperation-section 
-
