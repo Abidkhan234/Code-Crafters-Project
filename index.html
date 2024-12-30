@@ -63,12 +63,86 @@
             <i class="fas fa-magnifying-glass"></i>
             <i class="fa-regular fa-heart"></i>
             <div class="position-relative me-2">
-                <i class="fas fa-cart-shopping position-relative"></i>
+                <i class="fas fa-cart-shopping position-relative" id="cart-open-btn"></i>
                 <span class="text-white fw-medium position-absolute" id="item-count">0</span>
             </div>
         </div>
-        
+
     </nav>
+
+    <div class="cart-list d-flex flex-column gap-4 position-fixed top-0 end-0">
+
+        <div class="cart-top pb-4 d-flex justify-content-between align-items-center">
+            <h3 class="m-0 fs-4 fw-bold">Shopping Cart</h3>
+            <div class="cart-close-icon position-relative">
+                <button class="border-0 bg-transparent" id="cart-close-btn">
+                    <img src="./Assets/Images/nav/cart-close.png" alt="...">
+                    <i class="fas fa-xmark position-absolute"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="cart-content overflow-y-auto d-flex  flex-column gap-3">
+
+            <div class="item d-flex justify-content-between flex-wrap align-items-center">
+
+                <div class="item-image">
+                    <img src="./Assets/Images/nav/Group 146.png" alt="...">
+                </div>
+
+                <div class="d-flex align-items-center gap-2">
+
+                    <div class="item-info text-center">
+                        <h3 class="mb-2 fw-bold fs-4">Asgaard sofa</h3>
+                        <input type="number" value="1">
+                        <span class="fs-6 fw-medium ms-2">Rs. 250,000.00</span>
+                    </div>
+
+                    <div class="item-cancel">
+                        <i class="fas fa-xmark text-center align-content-center"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="item d-flex justify-content-between flex-wrap align-items-center">
+
+                <div class="item-image">
+                    <img src="./Assets/Images/nav/Asgaard sofa 5.png" alt="...">
+                </div>
+
+                <div class="d-flex align-items-center gap-2">
+
+                    <div class="item-info text-center">
+                        <h3 class="mb-2 fw-bold fs-4">Casaliving Wood</h3>
+                        <input type="number" value="1">
+                        <span class="fs-6 fw-medium ms-2">Rs. 270,000.00</span>
+                    </div>
+
+                    <div class="item-cancel">
+                        <i class="fas fa-xmark text-center align-content-center"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="cart-bottom mt-4">
+            <div class="total-prices pb-3 d-flex justify-content-between align-items-center">
+                <p class="m-0 fs-6 fw-medium">Subtotal</p>
+                <p class="m-0 fs-6 fw-semibold">Rs. 520,000.00</p>
+            </div>
+            <div class="cart-bottom-btns mt-4 d-flex flex-wrap gap-1 justify-content-between align-items-center">
+                <button class="fs-6 fw-medium bg-transparent">Cart</button>
+                <button class="fs-6 fw-medium bg-transparent">Checkout</button>
+                <button class="fs-6 fw-medium bg-transparent">Comparison</button>
+            </div>
+        </div>
+
+    </div>
 
     <!-- Navbar end -->
 

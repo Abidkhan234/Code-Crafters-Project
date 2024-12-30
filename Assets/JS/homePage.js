@@ -16,6 +16,25 @@ navCross.addEventListener("click", () => {
 
 // For Navbar
 
+// For cart open and close
+
+const cartOpenBtn = document.getElementById("cart-open-btn");
+
+const cartCloseBtn = document.getElementById("cart-close-btn");
+
+const cartList = document.querySelector(".cart-list");
+
+cartOpenBtn.addEventListener("click", () => {
+    cartList.classList.add("cart-list-open");
+    removingItem();
+})
+
+cartCloseBtn.addEventListener("click", () => {
+    cartList.classList.remove("cart-list-open");
+})
+
+// For cart open and close
+
 // For Cart Count
 
 const itemCount = document.getElementById("item-count");
@@ -36,6 +55,26 @@ additemBtn.forEach((value) => {
 
 // For Cart Count
 
+// For cart item remove
+
+const cartListItem = document.querySelectorAll(".item");
+
+const removingItem = () =>{
+
+    cartListItem.forEach((value) => {
+        const slectedItem = value.querySelector(".item-cancel i");
+    
+        slectedItem.addEventListener("click", (e) => {
+            e.target.parentElement.parentElement.parentElement.remove();
+        })
+    })
+    
+};
+
+
+
+// For cart item remove
+
 // For Product Section
 
 const productsRowTwo = document.querySelector(".product-section-content-row-2");
@@ -45,7 +84,7 @@ const productBtn = document.getElementById("showMoreProductBtn");
 productBtn.addEventListener("click", () => {
     if (productsRowTwo.classList.contains("product-section-content-row-2-open")) {
         productsRowTwo.classList.remove("product-section-content-row-2-open");
-        productBtn.innerText = "Show More"; 
+        productBtn.innerText = "Show More";
     } else {
         productsRowTwo.classList.add("product-section-content-row-2-open");
         productBtn.innerText = "Show Less";
