@@ -104,9 +104,9 @@ const insNext = document.getElementById("ins-next");
 const insPre = document.getElementById("ins-pre");
 
 let images = [
-    "Assets/Images/insperation-section/image-1.png",
-    "Assets/Images/insperation-section/image-2.png",
-    "Assets/Images/insperation-section/image-3.png"
+    "Assets/Images/home/insperation-section/image-1.png",
+    "Assets/Images/home/insperation-section/image-2.png",
+    "Assets/Images/home/insperation-section/image-3.png"
 ];
 
 let imageCounter = 0;

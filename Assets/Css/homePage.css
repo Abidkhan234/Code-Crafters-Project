@@ -82,7 +82,7 @@ nav .nav-icons span {
 
 /* For Cart list */
 
-.cart-list{
+.cart-list {
     top: 120%;
     right: 0;
     width: 100%;
@@ -94,31 +94,31 @@ nav .nav-icons span {
     z-index: 3;
 }
 
-.cart-list-open{
+.cart-list-open {
     max-height: 500px;
     padding: 20px;
 }
 
-.cart-top{
+.cart-top {
     border-bottom: 1px solid #666666;
 }
 
-.cart-list .cart-top div button img{
+.cart-list .cart-top div button img {
     width: 20px;
     height: 20px;
 }
 
-.cart-list .cart-top div button i{
+.cart-list .cart-top div button i {
     top: 7px;
     left: 4px;
     color: #9F9F9F;
 }
 
-.cart-content img{
+.cart-content img {
     border-radius: 3px;
 }
 
-.cart-content i{
+.cart-content i {
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -129,25 +129,25 @@ nav .nav-icons span {
     cursor: pointer;
 }
 
-.cart-content .item-info input{
+.cart-content .item-info input {
     width: 30px;
     border: none;
     outline: none;
 }
 
-.cart-content .item-info span{
+.cart-content .item-info span {
     color: var(--primary-color);
 }
 
-.cart-bottom .total-prices{
-    border-bottom: 1px solid  #9F9F9F;
+.cart-bottom .total-prices {
+    border-bottom: 1px solid #9F9F9F;
 }
 
-.cart-bottom .total-prices p:nth-child(2){
+.cart-bottom .total-prices p:nth-child(2) {
     color: var(--primary-color);
 }
 
-.cart-bottom .cart-bottom-btns button{
+.cart-bottom .cart-bottom-btns button {
     border-radius: 15px;
     border: 1px solid black;
     padding: 5px 20px;
@@ -177,9 +177,11 @@ nav .nav-icons span {
     .cart-list .cart-content .item {
         justify-content: center !important;
     }
-    .cart-bottom .cart-bottom-btns button:nth-child(3){
+
+    .cart-bottom .cart-bottom-btns button:nth-child(3) {
         flex: 1;
     }
+
     nav .nav-icons i {
         padding: 2px;
     }
@@ -196,7 +198,7 @@ nav .nav-icons span {
 /* hero-section start */
 
 .hero-section {
-    background-image: url(../Images/hero-section/hero-section-image.png);
+    background-image: url(../Images/home/hero-section/hero-section-image.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
