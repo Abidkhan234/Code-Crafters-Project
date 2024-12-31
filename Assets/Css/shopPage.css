@@ -196,61 +196,6 @@ nav .nav-icons span {
 /* Navbar end */
 
 
-/* hero-section start */
-
-.hero-section {
-    background-image: url(../Images/contact/hero-section/hero-section-image.png);
-    background-size: cover;
-    background-position: center center;
-    height: 90vh;
-    width: 100%;
-    position: relative;
-}
-
-.hero-section .hero-info-box {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-/* hero-section end */
-
-/* contact-section start */
-
-.heading p {
-    color: #666666;
-    width: 70%;
-}
-
-.heading h3 {
-    color: #333;
-}
-
-.contact-inputs input{
-    border: 1px solid #9F9F9F;
-    outline: none;
-}
-
-.contact-inputs textarea {
-    resize: none;
-    outline: none;
-}
-
-/* For contact */
-
-@media (max-width:767px) {
-    .heading p {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* For contact */
-
-/* contact-section end */
-
-
 /* footer start */
 
 footer {
