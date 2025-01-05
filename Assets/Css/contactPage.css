@@ -87,16 +87,15 @@ nav .nav-icons span {
     right: 0;
     width: 100%;
     max-width: 400px;
-    max-height: 0px;
-    overflow: hidden;
+    transform: translateY(-500px);
+    padding: 20px;
     background-color: white;
     transition: all 1s;
     z-index: 3;
 }
 
 .cart-list-open {
-    max-height: 500px;
-    padding: 20px;
+    transform: translateY(0px);
 }
 
 .cart-top {
@@ -235,6 +234,13 @@ nav .nav-icons span {
 .contact-inputs textarea {
     resize: none;
     outline: none;
+}
+
+.contact-inputs .contact-submit-btn button{
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: white;
 }
 
 /* For contact */

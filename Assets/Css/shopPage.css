@@ -87,16 +87,15 @@ nav .nav-icons span {
     right: 0;
     width: 100%;
     max-width: 400px;
-    max-height: 0px;
-    overflow: hidden;
+    transform: translateY(-500px);
     background-color: white;
     transition: all 1s;
     z-index: 3;
+    padding: 20px;
 }
 
 .cart-list-open {
-    max-height: 500px;
-    padding: 20px;
+    transform: translateY(0px);
 }
 
 .cart-top {
