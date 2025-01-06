@@ -215,71 +215,7 @@ nav .nav-icons span {
 
 /* hero-section end */
 
-/* contact-section start */
 
-.heading p {
-    color: #666666;
-    width: 70%;
-}
-
-.heading h3 {
-    color: #333;
-}
-
-.contact-inputs input{
-    border: 1px solid #9F9F9F;
-    outline: none;
-}
-
-.contact-inputs textarea {
-    resize: none;
-    outline: none;
-}
-
-.contact-inputs .contact-submit-btn button{
-    border: none;
-    outline: none;
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* For contact */
-
-@media (max-width:767px) {
-    .heading p {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* For contact */
-
-/* contact-section end */
-
-/* Warranty-section start */
-
-.warranty-container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.warranty-container .item-content{
-    align-items: center;
-}
-
-.item-content h4{
-    font-size: 22px;
-}
-
-.item-content p{
-    font-size: 15px;
-    color: #9F9F9F;
-}
-
-
-
-/* Warranty-section  end*/
 
 
 /* footer start */
