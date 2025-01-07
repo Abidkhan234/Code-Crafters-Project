@@ -87,7 +87,7 @@ nav .nav-icons span {
     right: 0;
     width: 100%;
     max-width: 400px;
-    transform: translateY(-500px);
+    transform: translateY(-100%);
     padding: 20px;
     background-color: white;
     transition: all 1s;
@@ -260,8 +260,13 @@ nav .nav-icons span {
 
 .warranty-container{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item{
+    flex-basis: 300px;
 }
 
 .warranty-container .item-content{
@@ -277,7 +282,16 @@ nav .nav-icons span {
     color: #9F9F9F;
 }
 
+/* For warranty-section */
 
+@media(max-width:710px){
+    .warranty-container{
+        justify-content: center;
+        
+    }
+}
+
+/* For warranty-section */
 
 /* Warranty-section  end*/
 

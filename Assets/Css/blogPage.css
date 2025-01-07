@@ -87,7 +87,7 @@ nav .nav-icons span {
     right: 0;
     width: 100%;
     max-width: 400px;
-    transform: translateY(-500px);
+    transform: translateY(-100%);
     padding: 20px;
     background-color: white;
     transition: all 1s;
