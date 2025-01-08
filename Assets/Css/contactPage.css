@@ -258,40 +258,7 @@ nav .nav-icons span {
 
 /* Warranty-section start */
 
-.warranty-container{
-    display: flex;
-    justify-content:space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 
-.item{
-    flex-basis: 300px;
-}
-
-.warranty-container .item-content{
-    align-items: center;
-}
-
-.item-content h4{
-    font-size: 22px;
-}
-
-.item-content p{
-    font-size: 15px;
-    color: #9F9F9F;
-}
-
-/* For warranty-section */
-
-@media(max-width:710px){
-    .warranty-container{
-        justify-content: center;
-        
-    }
-}
-
-/* For warranty-section */
 
 /* Warranty-section  end*/
 
