@@ -52,3 +52,24 @@ const removingItem = () =>{
 };
 
 // For cart item remove
+// cards start
+
+function page_change_btn(e){
+    let btn = e
+    const btn1 = document.getElementById("p-1-btn")
+    const btn2 = document.getElementById("p-2-btn")
+    const btn3 = document.getElementById("p-3-btn")
+    const btn4 = document.getElementById("p-4-btn")
+    btn1.classList.remove("bg-color1")
+    btn1.classList.remove("first")
+
+    btn2.classList.remove("bg-color1")
+    btn3.classList.remove("bg-color1")
+    btn4.classList.remove("bg-color1")
+    btn.classList.add("bg-color1")
+}
+
+
+
+
+// cards end
