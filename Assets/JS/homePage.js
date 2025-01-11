@@ -26,7 +26,6 @@ const cartList = document.querySelector(".cart-list");
 
 cartOpenBtn.addEventListener("click", () => {
     cartList.classList.add("cart-list-open");
-    removingItem();
 })
 
 cartCloseBtn.addEventListener("click", () => {
@@ -35,45 +34,166 @@ cartCloseBtn.addEventListener("click", () => {
 
 // For cart open and close
 
-// For Cart Count
+// For Add to cart function
 
-const itemCount = document.getElementById("item-count");
+const addToCartBtns = document.querySelectorAll(".add-item");
 
-const additemBtn = document.querySelectorAll(".add-item");
+addToCartBtns.forEach((buttton) => {
+    buttton.addEventListener("click", (event) => {
+        let productCard = event.target.closest(".product-card")
+        addToCart(productCard);
+    })
+})
 
-let itemCounter = 0;
+const addToCart = (event) => {
 
-const incrementingCount = () => {
-    itemCounter++;
+    const productTitle = event.querySelector(".card-bottom h5").innerText;
+    const productPrice = event.querySelector(".card-bottom p").innerText;
+    const productImage = event.querySelector(".card-top img").src;
 
-    itemCount.innerText = itemCounter;
-};
+    const cartContent = document.querySelector(".cart-content");
 
-additemBtn.forEach((value) => {
-    value.addEventListener("click", incrementingCount)
+    const cartItem = document.createElement("div");
+
+    cartItem.classList.add("item");
+
+    // For Duplicate Item Checking 
+
+    const cartItemTitle = cartContent.querySelectorAll(".item-title");
+
+    for (const itemTitle of cartItemTitle) {
+        if (itemTitle.innerText === productTitle) {
+            alert("This item already exist in cart.");
+            return;
+        }
+    }
+
+    // For Duplicate Item Checking 
+
+    cartItem.innerHTML = `
+
+                <div class="container-fluid overflow-hidden">
+                    <div class="row">
+                        <div class="col-sm-4 mb-3">
+                            <div class="item-image">
+                                <img src="${productImage}" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-8">
+
+                            <div class="item-info d-flex gap-4 align-items-center h-100">
+
+                                <div class="d-flex flex-column gap-3">
+                                    <h4 class="item-title m-0 fw-semibold">${productTitle}</h4>
+                                    <div class="item-quantity-info d-flex justify-content-between align-items-center">
+                                        <input type="number" class="item-quantity" value="1">
+                                        <p class="item-price m-0 fs-6 fw-medium">${productPrice}</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-xmark" onclick = "removeItem(event)"></i>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+    `;
+
+    cartContent.appendChild(cartItem);
+
+    // For quantity change Total price
+
+    cartItem.querySelector(".item-quantity").addEventListener("change", (event) => {
+        let quantity = event.target;
+
+        if (isNaN(quantity.value) || quantity.value <= 0) {
+            quantity.value = 1;
+        }
+
+        totalPriceUpdate();
+    })
+
+    // For quantity change Total price
+
+
+    totalPriceUpdate();
+
+}
+
+// For Add to cart function
+
+// For item remove 
+
+const removeItem = (item) => {
+
+    let clickedItem = item.target.closest(".item");
+
+    clickedItem.remove();
+
+    cartTotalItemCount();
+
+    totalPriceUpdate();
+
+
+}
+
+// For item remove 
+
+// For total Price update
+
+const totalPriceUpdate = () => {
+
+    const totalItem = document.querySelectorAll(".item");
+
+    const totalPriceElement = document.getElementById("totalPrice");
+
+    let total = 0;
+
+    totalItem.forEach((item) => {
+        const priceElement = item.querySelector(".item-price");
+        const quantityElement = item.querySelector(".item-quantity");
+        const price = parseFloat(priceElement.innerText.replace("$ ", ""));
+        const quantity = quantityElement.value;
+
+        total += price * quantity;
+    })
+
+    totalPriceElement.innerText = `$ ${total}`;
+
+}
+
+
+// For total Price update
+
+// For cart item count
+
+const addItemBtn = document.querySelectorAll(".add-item");
+let totalItem = 0;
+
+addItemBtn.forEach((button) => {
+    button.addEventListener("click", () => {
+        cartTotalItemCount();
+    })
 });
 
-// For Cart Count
+const cartTotalItemCount = () => {
 
-// For cart item remove
+    const cartItemCountElement = document.getElementById("cart-item-count");
 
-const cartListItem = document.querySelectorAll(".item");
+    const cartContent = document.querySelector(".cart-content");
 
-const removingItem = () =>{
+    totalItem = cartContent.children.length;
 
-    cartListItem.forEach((value) => {
-        const slectedItem = value.querySelector(".item-cancel i");
-    
-        slectedItem.addEventListener("click", (e) => {
-            e.target.parentElement.parentElement.parentElement.remove();
-        })
-    })
-    
-};
+    cartItemCountElement.innerText = totalItem;
 
+}
 
-
-// For cart item remove
+// For cart item count
 
 // For Product Section
 
