@@ -87,16 +87,15 @@ nav .nav-icons span {
     right: 0;
     width: 100%;
     max-width: 400px;
-    max-height: 0px;
-    overflow: hidden;
+    transform: translateY(-100%);
+    padding: 20px;
     background-color: white;
     transition: all 1s;
     z-index: 3;
 }
 
 .cart-list-open {
-    max-height: 500px;
-    padding: 20px;
+    transform: translateY(0px);
 }
 
 .cart-top {
@@ -202,7 +201,7 @@ nav .nav-icons span {
     background-image: url(../Images/contact/hero-section/hero-section-image.png);
     background-size: cover;
     background-position: center center;
-    height: 80vh;
+    height: 60vh;
     width: 100%;
     position: relative;
 }
@@ -237,6 +236,13 @@ nav .nav-icons span {
     outline: none;
 }
 
+.contact-inputs .contact-submit-btn button{
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: white;
+}
+
 /* For contact */
 
 @media (max-width:767px) {
@@ -249,6 +255,12 @@ nav .nav-icons span {
 /* For contact */
 
 /* contact-section end */
+
+/* Warranty-section start */
+
+
+
+/* Warranty-section  end*/
 
 
 /* footer start */
