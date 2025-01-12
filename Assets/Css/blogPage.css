@@ -87,7 +87,7 @@ nav .nav-icons span {
     right: 0;
     width: 100%;
     max-width: 400px;
-    transform: translateY(-500px);
+    transform: translateY(-100%);
     padding: 20px;
     background-color: white;
     transition: all 1s;
@@ -201,7 +201,7 @@ nav .nav-icons span {
     background-image: url(../Images/contact/hero-section/hero-section-image.png);
     background-size: cover;
     background-position: center center;
-    height: 80vh;
+    height: 60vh;
     width: 100%;
     position: relative;
 }
@@ -215,6 +215,41 @@ nav .nav-icons span {
 
 /* hero-section end */
 
+/* post-section start */
+
+.post-section .image-post-info p,.post-section .image-post-info i{
+    color: #9F9F9F;
+}
+
+.image-description .image-description-btn button{
+    border: none;
+    outline: none;
+    background: transparent;
+    position: relative;
+}
+
+.image-description .image-description-btn button::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 6px;
+    width: 80%;
+    height: 2px;
+    background-color: black;
+}
+
+.image-description p{
+    color: #9F9F9F;
+}
+
+/* post-section end */
+
+
+/* Warranty-section start */
+
+
+
+/* Warranty-section  end*/
 
 
 
