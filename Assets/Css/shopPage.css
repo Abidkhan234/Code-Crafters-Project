@@ -254,25 +254,27 @@ footer {
 /* footer end */
 
 /* second last section start */
-.sec-last-head{
-    background-color:#FAF3EA ;
+.sec-last-head {
+    background-color: #FAF3EA;
     padding-top: 150px;
     padding-bottom: 100px;
     width: 100%;
 
 }
+
 /* second last section end */
 
 /* cards countss section */
-.cards-countss-section{
+.cards-countss-section {
     background-color: #F9F1E7;
-    height:fit-content;
+    height: fit-content;
     width: 100%;
     overflow: hidden;
 
 
 }
-.cards-countss-section-col{
+
+.cards-countss-section-col {
     margin-top: 10px;
 
 }
@@ -281,76 +283,79 @@ footer {
 
 
 /* card section start */
-.card-body{
+.card-body {
     background-color: #F4F5F7;
 
 }
 
-.full-card-body{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-        padding:0px 0px;
-       
-        
+.full-card-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0px 0px;
+
+
 }
-.card{
+
+.card {
     max-width: 100%;
     width: 450px;
     background-color: #F4F5F7;
 
 }
+
 @media (max-width : 400px) {
-    .full-card-body{
+    .full-card-body {
         margin: 0%;
 
-  
-        
+
+
     }
-    
-}
-@media (max-width : 850px) {
-    .full-card-body{
-        place-items: center;
-        padding:0px 20px;
-        overflow: hidden;
-        
-    }
-    
+
 }
 
-.page-change-btn{
-    width: fit-content; 
+@media (max-width : 850px) {
+    .full-card-body {
+        place-items: center;
+        padding: 0px 20px;
+        overflow: hidden;
+
+    }
+
+}
+
+.page-change-btn {
+    width: fit-content;
     padding: 18px 29px;
-     border-radius: 10px;
-     font-weight: 500;
-     font-size: larger;
-      background-color:#F9F1E7; 
-      border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: larger;
+    background-color: #F9F1E7;
+    border: none;
 }
 
 
 /* card section end */
 
 /* <!-- page change section start-->*/
-.shop-bg-img{
-    background-image: url(../Images/shop/card-section/Rectangle.png);
-    max-width: 100%;
-    height: 416px;
-    background-repeat: no-repeat;
+.shop-bg-img {
+    background-image: url(../Images/contact/hero-section/hero-section-image.png);
     background-size: cover;
-    align-content: center;
-
+    background-position: center center;
+    height: 60vh;
+    width: 100%;
+    position: relative;
 }
-.shop-bg-img-content{
-    display: flex;
-    justify-content: center;
 
-
+.shop-bg-img-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .bg-color1,
-.first{
+.first {
     background-color: #B88E2F;
     color: white;
 }
