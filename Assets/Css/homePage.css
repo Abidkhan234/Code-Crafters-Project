@@ -160,22 +160,6 @@ nav .nav-icons span {
 
 /* For Cart list */
 
-/* For Cart list overlay */
-
-.cart-list-overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    z-index: 2;
-    height: 555%;
-    transition: all 0.5s ease-in;
-}
-
-.cart-list-overlay-show{
-    opacity: 1;
-}
-
-/* For Cart list overlay */
-
 /* For Navbar */
 
 @media (max-width:992px) {
