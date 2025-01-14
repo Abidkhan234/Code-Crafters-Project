@@ -26,10 +26,6 @@
 </head>
 
 <body>
-
-
-    <!-- Navbar start -->
-
     <nav
         class="bg-white z-2 position-fixed top-0 left-0 right-0 ps-sm-5 pe-sm-5 pt-2 pb-2 d-flex w-100 justify-content-between align-items-center flex-wrap">
         <div class="nav-logo d-flex gap-2 align-items-center">
@@ -39,25 +35,28 @@
 
         <div class="nav-menu">
             <ul class="d-flex gap-5 m-0 list-unstyled">
-                <li><a href="../index.html" class="text-decoration-none fs-5 text-black">Home</a></li>
-                <li><a href="./shopPage.html" class="text-decoration-none fs-5 text-black">Shop</a></li>
-                <li><a href="./blogPage.html" class="text-decoration-none fs-5 text-black">Blog</a></li>
-                <li><a href="#" class="text-decoration-none fs-5 text-black">Contact</a></li>
+                <li><a href="#" class="text-decoration-none fs-5 text-black">Home</a></li>
+                <li><a href="../Screen/shopPage.html" class="text-decoration-none fs-5 text-black">Shop</a></li>
+                <li><a href="../Screen/blogPage.html" class="text-decoration-none fs-5 text-black">Blog</a></li>
+                <li><a href="Screen/contactPage.html" class="text-decoration-none fs-5 text-black">Contact</a></li>
             </ul>
         </div>
 
         <div class="side-nav-menu p-3 pt-5" id="side-nav-menu">
             <i class="fas fa-xmark fs-3 position-absolute top-0 end-0 text-white" id="nav-cross"></i>
             <div class="nav-logo d-flex gap-2">
-                <img src="C:\Users\wajih\OneDrive\Documents\Code-Crafters-Project\Assets\Images\checkout\nav\navLogo.png" width="50" height="32" alt="Nav-Logo">
+                <img src="./Assets/Images/home/nav/navLogo.png" width="50" height="32" alt="Nav-Logo">
                 <h2 class="m-0">Furniro</h2>
             </div>
 
             <ul class="d-flex flex-column gap-5 m-0 mt-5 list-unstyled">
-                <li><a href="../index.html" class="text-decoration-none fs-5 fw-medium text-black">Home</a></li>
-                <li><a href="./shopPage.html" class="text-decoration-none fs-5 fw-medium text-black">Shop</a></li>
-                <li><a href="./blogPage.html" class="text-decoration-none fs-5 fw-medium text-black">Blog</a></li>
-                <li><a href="#" class="text-decoration-none fs-5 fw-medium text-black">Contact</a></li>
+                <li><a href="#" class="text-decoration-none fs-5 fw-medium text-black">Home</a></li>
+                <li><a href="./Screen/shopPage.html" class="text-decoration-none fs-5 fw-medium text-black">Shop</a>
+                </li>
+                <li><a href="./Screen/blogPage.html" class="text-decoration-none fs-5 fw-medium text-black">Blog</a>
+                </li>
+                <li><a href="./Screen/contactPage.html"
+                        class="text-decoration-none fs-5 fw-medium text-black">Contact</a></li>
             </ul>
         </div>
 
@@ -68,10 +67,72 @@
             <i class="fa-regular fa-heart"></i>
             <div class="position-relative me-2">
                 <i class="fas fa-cart-shopping position-relative" id="cart-open-btn"></i>
+                <span id="cart-item-count" class="position-absolute">0</span>
             </div>
         </div>
 
     </nav>
+
+    <div class="cart-list d-flex flex-column gap-4 p-3">
+        <div class="cart-top pb-3 d-flex justify-content-between align-items-center">
+            <h2 class="m-0 fw-bold fs-4">Shopping Cart</h2>
+            <div class="cart-list-close position-relative">
+                <img src="../Assets/Images/checkout/nav/cart-close.png" alt="..." width="22" height="22">
+                <i class="fas fa-xmark position-absolute" id="cart-close-btn"></i>
+            </div>
+        </div>
+
+        <div class="cart-content d-flex flex-column gap-4 overflow-y-auto">
+
+        </div>
+
+        <div class="cart-bottom">
+            <div class="container-fluid overflow-hidden">
+                <div class="row pb-2" style="border-bottom: 1px solid #898989;">
+                    <div class="col-12">
+                        <div class="total-price d-flex justify-content-between">
+                            <p class="m-0 fs-6 fw-medium">Subtotal</p>
+                            <span class="fs-6 fw-bold" id="totalPrice">$ 0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+
+                    <div class="col-12">
+                        <div class="cart-bottom-btns d-flex justify-content-between flex-wrap gap-2">
+
+                            <button class="fs-6 fw-medium bg-transparent">Cart</button>
+                            
+                            <a href="../Screen/checkoutpage.html"><button class="fs-6 fw-medium bg-transparent">Checkout</button></a>
+
+                            
+
+                    <button class="fs-6 fw-medium bg-transparent">Comparision</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="cart-bottom mt-4">
+            <div class="total-prices pb-3 d-flex justify-content-between align-items-center">
+                <p class="m-0 fs-6 fw-medium">Subtotal</p>
+                <p class="m-0 fs-6 fw-semibold">Rs. 520,000.00</p>
+            </div>
+            <div class="cart-bottom-btns mt-4 d-flex flex-wrap gap-1 justify-content-between align-items-center">
+                <button class="fs-6 fw-medium bg-transparent">Cart</button>
+                <a href="../Screen/checkoutpage.html"><button class="fs-6 fw-medium bg-transparent">Checkout</button></a>
+                
+                <button class="fs-6 fw-medium bg-transparent">Comparison</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navbar end -->
 
     <div class="cart-list d-flex flex-column gap-4 position-fixed top-0 end-0">
 
@@ -251,7 +312,7 @@
                 </tr>
                 <tr class="total">
                     <td>Total</td>
-                    <td>Rs. 250,000.00</td>
+                    <td class="bg-color">Rs. 250,000.00</td>
                 </tr>
             </table>
 
@@ -271,61 +332,62 @@
         </div>
 </section>
     
-    <!-- checkout-section end -->
+    <!-- second last section start -->
 
-    <!-- warranty-section start -->
-
-    <section class="warranty-section pt-4 pb-4 ps-3 pe-3">
-
-        <div class="container-fluid over overflow-hidden">
-            
-            <div class="row">
-
-                <div class="warranty-container">
-
-                    <div class="item d-flex gap-2 align-items-center mb-5">
-                        <img src="../Assets/Images/checkout/warranty-section/trophy 1.png" width="60" height="60"
-                            alt="...">
-                        <div class="item-content">
-                            <h4 class="fw-bold">High Quality</h3>
-                                <p class="m-0 fw-medium">crafted from top materials</p>
-                        </div>
+    <div class="container-fluid sec-last-head">
+        <div class="row  d-flex justify-content-between align-items-center">
+            <div class="col-12 col-md-6 col-xxl-3 d-flex justify-content-center">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="../Assets/Images/shop/second-last-section/logo1.png" width="60px" height="60px" alt="">
                     </div>
-
-                    <div class="item d-flex gap-2 align-items-center mb-5">
-                        <img src="../Assets/Images/checkout/warranty-section/guarantee.png" width="60" height="60"
-                            alt="...">
-                        <div class="item-content">
-                            <h4 class="fw-bold">Warranty Protection</h3>
-                                <p class="m-0 fw-medium">Over 2 years</p>
-                        </div>
-                    </div>
-
-                    <div class="item d-flex gap-2 align-items-center mb-5">
-                        <img src="../Assets/Images/checkout/warranty-section/shipping.png" width="60" height="60"
-                            alt="...">
-                        <div class="item-content">
-                            <h4 class="fw-bold">Free Shipping</h3>
-                                <p class="m-0 fw-medium">Order over 150 $</p>
-                        </div>
-                    </div>
-
-                    <div class="item d-flex gap-2 align-items-center mb-5">
-                        <img src="../Assets/Images/checkout/warranty-section/customer-support.png" width="60" height="60"
-                            alt="...">
-                        <div class="item-content">
-                            <h4 class="fw-bold">24 / 7 Support</h3>
-                                <p class="m-0 fw-medium">Dedicated support</p>
-                        </div>
+                    <div class="col-9"> 
+                         <p style="font-size: 25px ; font-weight: 600; ">High Quality</p>
+                         <p>crafted from top materials</p>
                     </div>
                 </div>
             </div>
+            <div class="col-12 col-md-6 col-xxl-3 d-flex justify-content-center">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="../Assets/Images/shop/second-last-section/logo2.png" width="60px" height="60px" alt="">
+                    </div>
+                    <div class="col-9"> 
+                         <p style="font-size: 25px ; font-weight: 600; ">High Quality</p>
+                         <p>crafted from top materials</p>
+                    </div>
+                </div>
 
-        </div>
+            </div>
+            <div class="col-12 col-md-6 col-xxl-3 d-flex justify-content-center">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="../Assets/Images/shop/second-last-section/logo3.png" width="60px" height="60px" alt="">
+                    </div>
+                    <div class="col-9"> 
+                         <p style="font-size: 25px ; font-weight: 600; ">High Quality</p>
+                         <p>crafted from top materials</p>
+                    </div>
+                </div>
 
-    </section>
+            </div>
+            <div class="col-12 col-md-6 col-xxl-3 d-flex justify-content-center">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="../Assets/Images/shop/second-last-section/logo4.png" width="60px" height="60px" alt="">
+                    </div>
+                    <div class="col-9"> 
+                         <p style="font-size: 25px ; font-weight: 600; ">High Quality</p>
+                         <p>crafted from top materials</p>
+                    </div>
+                </div>
 
-    <!-- warranty-section end -->
+            </div>
+          </div>
+</div>
+
+ <!-- second last section end -->
+
 
     <!-- Footer start -->
 
@@ -335,7 +397,7 @@
                 <div class="col-12">
                     <div class="footer-heading w-100">
                         <div class="nav-logo d-flex align-items-center gap-2 justify-content-center">
-                            <img src="../Assets/Images/checkout/hero-section/hero-section-logo.png" width="60" height="40" alt="Nav-Logo">
+                            <img src="../Assets/Images/checkout/nav/navLogo.png" width="60" height="40" alt="Nav-Logo">
                             <h2 class="m-0 fs-1">Furniro</h2>
                         </div>
                     </div>
