@@ -35,10 +35,20 @@ cartCloseBtn.addEventListener("click", () => {
 
 // For cart open and close
 
-// For add to cart functionality
+// For cart item remove
 
+const cartListItem = document.querySelectorAll(".item");
 
+const removingItem = () =>{
 
-// For add to cart functionality
+    cartListItem.forEach((value) => {
+        const slectedItem = value.querySelector(".item-cancel i");
+    
+        slectedItem.addEventListener("click", (e) => {
+            e.target.parentElement.parentElement.parentElement.remove();
+        })
+    })
+    
+};
 
-
+// For cart item remove

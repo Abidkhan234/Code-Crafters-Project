@@ -204,7 +204,7 @@ nav .nav-icons span {
 /* hero-section start */
 
 .hero-section {
-    background-image: url(../Images/contact/hero-section/hero-section-image.png);
+    background-image: url(../Images/checkout/hero-section/hero-section-image.png);
     background-size: cover;
     background-position: center center;
     height: 60vh;
@@ -221,55 +221,172 @@ nav .nav-icons span {
 
 /* hero-section end */
 
-/* contact-section start */
+/* checkout-section start*/
 
-.heading p {
-    color: #666666;
-    width: 70%;
-}
-
-.heading h3 {
-    color: #333;
-}
-
-.contact-inputs input{
-    border: 1px solid #9F9F9F;
-    outline: none;
-}
-
-.contact-inputs textarea {
-    resize: none;
-    outline: none;
-}
-
-.contact-inputs .contact-submit-btn button{
-    border: none;
-    outline: none;
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* For contact */
-
-@media (max-width:767px) {
+@media (max-width: 767px) {
     .heading p {
         width: 100%;
         text-align: center;
     }
+
+    /* Ensure mobile-friendly display*/
+    .checkout-section {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .billing-container {
+        width: 100%;
+    }
+
+    .product-summary {
+        width: 100%;
+    }
 }
 
-/* For contact */
+/* For contact*/
 
-/* contact-section end */
+.checkout-section {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.billing-container {
+    width: 60%;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.product-summary {
+    width: 35%;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Other CSS remains the same */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.product-summary h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.product-summary table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+.product-summary .total {
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+
+.product-summary .total .bg-color{
+    font-weight: bold;
+    font-size: 18px;
+    color: #B88E2F;
+    
+}
+
+.payment-methods {
+    margin-bottom: 20px;
+}
+
+.payment-methods label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.payment-methods input {
+    margin-right: 10px;
+}
+
+.place-order-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: white;
+    padding: 20px 80px;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* checkout section end */
+
 
 /* Warranty-section start */
+
+.warranty-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #faf3ea;
+}
+
+.warranty-container .item-content{
+    align-items: center;
+}
+
+.item-content h4{
+    font-size: 22px;
+}
+
+.item-content p{
+    font-size: 15px;
+    color: #9F9F9F;
+}
 
 
 
 /* Warranty-section  end*/
 
 
-/* footer start */
+/* footer start*/
 
 footer {
     border-top: 1px solid #666666;
@@ -311,7 +428,7 @@ footer {
     padding: 10px;
 }
 
-/* For footer */
+/* For footer*/
 
 @media (max-width:550px) {
 
@@ -326,10 +443,101 @@ footer {
 /* For footer */
 
 /* footer end */
-.sec-last-head{
-    background-color:#FAF3EA ;
-    padding-top: 150px;
-    padding-bottom: 100px;
-    width: 100%;
 
+@media (max-width: 768px) {
+    .side-nav-menu {
+        width: 250px;
+    }
+
+    nav .nav-icons i {
+        font-size: 18px;
+    }
+    .billing-container{
+    width: 100%;
+}
+.product-summary{
+    width: 100%;
+}
+}
+
+ /* Screens smaller than 425px  */
+@media (max-width: 425px) {
+    nav .nav-icons i {
+        font-size: 16px;
+        padding: 2px;
+    }
+
+    .side-nav-menu {
+        width: 100%;
+    }
+
+    nav .nav-logo h2 {
+        font-size: 18px;
+    }
+}
+
+/* Screens smaller than 344px  */
+@media (max-width: 344px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav .nav-logo h2 {
+        font-size: 16px;
+    }
+
+    nav .nav-icons {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Screens smaller than 425px */
+@media (max-width: 425px) {
+    nav .nav-icons i {
+        font-size: 16px;
+        padding: 2px;
+    }
+
+    .side-nav-menu {
+        width: 100%;
+    }
+
+    nav .nav-logo h2 {
+        font-size: 18px;
+    }
+}
+
+/* Screens smaller than 388px */
+@media (max-width: 388px) {
+    .nav-icons {
+        /* Ensure icons do not auto-open or behave unexpectedly */
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+
+@media (max-width: 392px) {
+    /* Add this block to apply consistent styles to smaller screen widths */
+    .nav-menu {
+        display: flex; /* Ensure the nav menu remains displayed */
+        flex-direction: row; /* Ensure menu items stay in a row */
+        justify-content: space-between; /* Distribute items evenly */
+        align-items: center; /* Center items vertically */
+    }
+
+    .side-nav-menu {
+        display: none; /* Hide the side navigation menu */
+    }
+
+    #nav-bar {
+        display: inline; /* Show the nav bar */
+    }
+
+    .nav-icons {
+        display: flex; /* Ensure the nav icons remain displayed */
+    }
 }

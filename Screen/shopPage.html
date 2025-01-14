@@ -2,133 +2,133 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop</title>
 
-    <link rel="shortcut icon" href="../Assets/Images/title-icon/Title-Icon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../Assets/Images/title-icon/Title-Icon.png" type="image/x-icon">
 
-    <!-- Bootstrap link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Bootstrap link -->
+  <!-- Bootstrap link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Bootstrap link -->
 
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Font Awesome CDN -->
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome CDN -->
 
-    <link rel="stylesheet" href="../Assets/Css/shopPage.css">
+  <link rel="stylesheet" href="../Assets/Css/shopPage.css">
 
 </head>
 
 <body>
 
-    <!-- Navbar start -->
+  <!-- Navbar start -->
 
-    <nav
-        class="bg-white z-2 position-fixed top-0 left-0 right-0 ps-sm-5 pe-sm-5 pt-2 pb-2 d-flex w-100 justify-content-between align-items-center flex-wrap">
-        <div class="nav-logo d-flex gap-2 align-items-center">
-            <img src="../Assets/Images/shop/nav/navLogo.png" width="50" height="32" alt="Nav-Logo">
-            <h2 class="m-0">Furniro</h2>
+  <nav
+    class="bg-white z-2 position-fixed top-0 left-0 right-0 ps-sm-5 pe-sm-5 pt-2 pb-2 d-flex w-100 justify-content-between align-items-center flex-wrap">
+    <div class="nav-logo d-flex gap-2 align-items-center">
+      <img src="../Assets/Images/shop/nav/navLogo.png" width="50" height="32" alt="Nav-Logo">
+      <h2 class="m-0">Furniro</h2>
+    </div>
+
+    <div class="nav-menu">
+      <ul class="d-flex gap-5 m-0 list-unstyled">
+        <li><a href="../index.html" class="text-decoration-none fs-5 text-black">Home</a></li>
+        <li><a href="#" class="text-decoration-none fs-5 text-black">Shop</a></li>
+        <li><a href="./blogPage.html" class="text-decoration-none fs-5 text-black">Blog</a></li>
+        <li><a href="./contactPage.html" class="text-decoration-none fs-5 text-black">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="side-nav-menu p-3 pt-5" id="side-nav-menu">
+      <i class="fas fa-xmark fs-3 position-absolute top-0 end-0 text-white" id="nav-cross"></i>
+      <div class="nav-logo d-flex gap-2">
+        <img src="../Assets/Images/shop/nav/navLogo.png" width="50" height="32" alt="Nav-Logo">
+        <h2 class="m-0">Furniro</h2>
+      </div>
+
+      <ul class="d-flex flex-column gap-5 m-0 mt-5 list-unstyled">
+        <li><a href="../index.html" class="text-decoration-none fs-5 fw-medium text-black">Home</a></li>
+        <li><a href="#" class="text-decoration-none fs-5 fw-medium text-black">Shop</a></li>
+        <li><a href="./blogPage.html" class="text-decoration-none fs-5 fw-medium text-black">Blog</a></li>
+        <li><a href="./contactPage.html" class="text-decoration-none fs-5 fw-medium text-black">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-icons d-flex gap-sm-4 gap-2">
+      <i class="fas fa-bars" id="nav-bar"></i>
+      <i class="fas fa-user"></i>
+      <i class="fas fa-magnifying-glass"></i>
+      <i class="fa-regular fa-heart"></i>
+      <div class="position-relative me-2">
+        <i class="fas fa-cart-shopping position-relative" id="cart-open-btn"></i>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="cart-list d-flex flex-column gap-4 position-fixed top-0 end-0">
+
+    <div class="cart-top pb-4 d-flex justify-content-between align-items-center">
+      <h3 class="m-0 fs-4 fw-bold">Shopping Cart</h3>
+      <div class="cart-close-icon position-relative">
+        <button class="border-0 bg-transparent" id="cart-close-btn">
+          <img src="../Assets/Images/shop/nav/cart-close.png" alt="...">
+          <i class="fas fa-xmark position-absolute"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="cart-content overflow-y-auto d-flex  flex-column gap-3">
+
+      <div class="item d-flex justify-content-between flex-wrap align-items-center">
+
+        <div class="item-image">
+          <img src="../Assets/Images/shop/nav/Group 146.png" alt="...">
         </div>
 
-        <div class="nav-menu">
-            <ul class="d-flex gap-5 m-0 list-unstyled">
-                <li><a href="../index.html" class="text-decoration-none fs-5 text-black">Home</a></li>
-                <li><a href="#" class="text-decoration-none fs-5 text-black">Shop</a></li>
-                <li><a href="./blogPage.html" class="text-decoration-none fs-5 text-black">Blog</a></li>
-                <li><a href="./contactPage.html" class="text-decoration-none fs-5 text-black">Contact</a></li>
-            </ul>
-        </div>
+        <div class="d-flex align-items-center gap-2">
 
-        <div class="side-nav-menu p-3 pt-5" id="side-nav-menu">
-            <i class="fas fa-xmark fs-3 position-absolute top-0 end-0 text-white" id="nav-cross"></i>
-            <div class="nav-logo d-flex gap-2">
-                <img src="../Assets/Images/shop/nav/navLogo.png" width="50" height="32" alt="Nav-Logo">
-                <h2 class="m-0">Furniro</h2>
-            </div>
+          <div class="item-info text-center">
+            <h3 class="mb-2 fw-bold fs-4">Asgaard sofa</h3>
+            <input type="number" value="1">
+            <span class="fs-6 fw-medium ms-2">Rs. 250,000.00</span>
+          </div>
 
-            <ul class="d-flex flex-column gap-5 m-0 mt-5 list-unstyled">
-                <li><a href="../index.html" class="text-decoration-none fs-5 fw-medium text-black">Home</a></li>
-                <li><a href="#" class="text-decoration-none fs-5 fw-medium text-black">Shop</a></li>
-                <li><a href="./blogPage.html" class="text-decoration-none fs-5 fw-medium text-black">Blog</a></li>
-                <li><a href="./contactPage.html" class="text-decoration-none fs-5 fw-medium text-black">Contact</a></li>
-            </ul>
-        </div>
-
-        <div class="nav-icons d-flex gap-sm-4 gap-2">
-            <i class="fas fa-bars" id="nav-bar"></i>
-            <i class="fas fa-user"></i>
-            <i class="fas fa-magnifying-glass"></i>
-            <i class="fa-regular fa-heart"></i>
-            <div class="position-relative me-2">
-                <i class="fas fa-cart-shopping position-relative" id="cart-open-btn"></i>
-            </div>
-        </div>
-
-    </nav>
-
-    <div class="cart-list d-flex flex-column gap-4 position-fixed top-0 end-0">
-
-        <div class="cart-top pb-4 d-flex justify-content-between align-items-center">
-            <h3 class="m-0 fs-4 fw-bold">Shopping Cart</h3>
-            <div class="cart-close-icon position-relative">
-                <button class="border-0 bg-transparent" id="cart-close-btn">
-                    <img src="../Assets/Images/shop/nav/cart-close.png" alt="...">
-                    <i class="fas fa-xmark position-absolute"></i>
-                </button>
-            </div>
-        </div>
-
-        <div class="cart-content overflow-y-auto d-flex  flex-column gap-3">
-
-            <div class="item d-flex justify-content-between flex-wrap align-items-center">
-
-                <div class="item-image">
-                    <img src="../Assets/Images/shop/nav/Group 146.png" alt="...">
-                </div>
-
-                <div class="d-flex align-items-center gap-2">
-
-                    <div class="item-info text-center">
-                        <h3 class="mb-2 fw-bold fs-4">Asgaard sofa</h3>
-                        <input type="number" value="1">
-                        <span class="fs-6 fw-medium ms-2">Rs. 250,000.00</span>
-                    </div>
-
-                    <div class="item-cancel">
-                        <i class="fas fa-xmark text-center align-content-center"></i>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="item d-flex justify-content-between flex-wrap align-items-center">
-
-                <div class="item-image">
-                    <img src="../Assets/Images/shop/nav/Asgaard sofa 5.png" alt="...">
-                </div>
-
-                <div class="d-flex align-items-center gap-2">
-
-                    <div class="item-info text-center">
-                        <h3 class="mb-2 fw-bold fs-4">Casaliving Wood</h3>
-                        <input type="number" value="1">
-                        <span class="fs-6 fw-medium ms-2">Rs. 270,000.00</span>
-                    </div>
-
-                    <div class="item-cancel">
-                        <i class="fas fa-xmark text-center align-content-center"></i>
-                    </div>
-
-                </div>
-
-            </div>
+          <div class="item-cancel">
+            <i class="fas fa-xmark text-center align-content-center"></i>
+          </div>
 
         </div>
+
+      </div>
+
+      <div class="item d-flex justify-content-between flex-wrap align-items-center">
+
+        <div class="item-image">
+          <img src="../Assets/Images/shop/nav/Asgaard sofa 5.png" alt="...">
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+
+          <div class="item-info text-center">
+            <h3 class="mb-2 fw-bold fs-4">Casaliving Wood</h3>
+            <input type="number" value="1">
+            <span class="fs-6 fw-medium ms-2">Rs. 270,000.00</span>
+          </div>
+
+          <div class="item-cancel">
+            <i class="fas fa-xmark text-center align-content-center"></i>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
 
         <div class="cart-bottom mt-4">
             <div class="total-prices pb-3 d-flex justify-content-between align-items-center">
@@ -137,32 +137,38 @@
             </div>
             <div class="cart-bottom-btns mt-4 d-flex flex-wrap gap-1 justify-content-between align-items-center">
                 <button class="fs-6 fw-medium bg-transparent">Cart</button>
-                <button class="fs-6 fw-medium bg-transparent">Checkout</button>
+                <a href="../Screen/checkoutpage.html">
+                  <button class="fs-6 fw-medium bg-transparent">Checkout</button></a>
                 <button class="fs-6 fw-medium bg-transparent">Comparison</button>
             </div>
         </div>
 
-    </div>
+  </div>
 
-    <!-- Navbar end -->
-<br>
-<br>
-<!-- page change section start-->
- <div class="container-fluid shop-bg-img ">
-   <div class="shop-bg-img-content">
-    <h1 class="d-flex justify-content-center"  style="font-family: Poppins;font-size: 60px;font-weight: 500;">Shop</h1>
-    </div>
-    <div class="a text-center d-flex justify-content-center gap-2">
-      <a style="text-decoration: none; color: black; font-size: 20px;" href="/index.html">Home</a>
-      <div style="font-size: 25px;">></div>
-      <a style="text-decoration: none; color: black; font-size: 20px;" href="shopPage.html">Shop</a>
-    </div>
-</div>
-<!-- page change section end-->
+  <!-- Navbar end -->
+  <br>
+  <br>
+  <!-- page change section start-->
+  <div class="container-fluid shop-bg-img">
+    <div class="shop-bg-img-content">
+      <h1 class="d-flex justify-content-center" style="font-family: Poppins;font-size: 60px;font-weight: 500;">Shop</h1>
 
-    <!-- cards countss section start -->
+      <div class="a text-center d-flex justify-content-center gap-2">
+        <a style="text-decoration: none; color: black; font-size: 20px;" href="/index.html">Home</a>
+        <div style="font-size: 25px;">></div>
+        <a style="text-decoration: none; color: black; font-size: 20px;" href="shopPage.html">Shop</a>
+      </div>
+    </div>
+  </div>
+  <!-- page change section end-->
 
+<<<<<<< HEAD
     <!-- <div class="container-fluid overflow-hidden cards-countss-section pt-4 pb-4">
+=======
+  <!-- cards countss section start -->
+
+  <!-- <div class="container-fluid overflow-hidden cards-countss-section pt-4 pb-4">
+>>>>>>> d604f09918557107333b30e14b691c05fa73de1d
         <div class="row">
             <div class="col-12 col-md-6 d-flex justify-content-center cards-countss-section-col ">
                 <div class="col d-flex justify-content-center justify-content-around ">
@@ -184,7 +190,26 @@
                 
             </div>
         </div>
+    </div> -->
+
+  <!-- cards countss section end -->
+
+  <!-- card section start -->
+
+  <div class="container overflow-hidden full-card-body mt-5 mb-5 ">
+
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/Image1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Syltherine</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 2.500.000</h5>
+          <s>Rp 3.500.000</s>
+        </div>
+      </div>
     </div>
+<<<<<<< HEAD
  -->
     <div class="container-fluid   d-flex cards-countss-section pt-5 pb-5 " style="margin-left: 5px;">
         <div class="row container d-flex justify-content-center" >
@@ -948,141 +973,328 @@
     <button id="p-2-btn" onclick="page_change_btn(this)"  class="page-change-btn">2</button>
     <button id="p-3-btn" onclick="page_change_btn(this)"  class="page-change-btn">3</button>
     <button id="p-4-btn" onclick="page_change_btn(this)"  class="page-change-btn">next</button>
+=======
 
-  </div>
-</div>
-
-
-
-
-
-
-    <!-- card section end -->
-
-
-     <!-- second last section start -->
-
-    <div class="container-fluid sec-last-head">
-            <div class="row  d-flex justify-content-between align-items-center">
-                <div class="col-12 col-md-6 col-xxl-3 d-flex justify-content-center">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="../Assets/Images/shop/second-last-section/logo1.png" width="60px" height="60px" alt="">
-                        </div>
-                        <div class="col-9"> 
-                             <p style="font-size: 25px ; font-weight: 600; ">High Quality</p>
-                             <p>crafted from top materials</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-xxl-3 d-flex justify-content-center">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="../Assets/Images/shop/second-last-section/logo2.png" width="60px" height="60px" alt="">
-                        </div>
-                        <div class="col-9"> 
-                             <p style="font-size: 25px ; font-weight: 600; ">High Quality</p>
-                             <p>crafted from top materials</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-12 col-md-6 col-xxl-3 d-flex justify-content-center">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="../Assets/Images/shop/second-last-section/logo3.png" width="60px" height="60px" alt="">
-                        </div>
-                        <div class="col-9"> 
-                             <p style="font-size: 25px ; font-weight: 600; ">High Quality</p>
-                             <p>crafted from top materials</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-12 col-md-6 col-xxl-3 d-flex justify-content-center">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="../Assets/Images/shop/second-last-section/logo4.png" width="60px" height="60px" alt="">
-                        </div>
-                        <div class="col-9"> 
-                             <p style="font-size: 25px ; font-weight: 600; ">High Quality</p>
-                             <p>crafted from top materials</p>
-                        </div>
-                    </div>
-
-                </div>
-              </div>
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/image 2.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Leviosa</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 2.500.000</h5>
+        </div>
+      </div>
     </div>
 
-     <!-- second last section end -->
-
-
-
-    <!-- Footer start -->
-
-    <footer>
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12">
-                    <div class="footer-heading w-100">
-                        <div class="nav-logo d-flex align-items-center gap-2 justify-content-center">
-                            <img src="../Assets/Images/home/nav/navLogo.png" width="60" height="40" alt="Nav-Logo">
-                            <h2 class="m-0 fs-1">Furniro</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-sm-6 mb-3">
-                    <div class="footer-content-1">
-                        <h4>Links</h4>
-                        <ul class="list-unstyled d-flex flex-column gap-4">
-                            <li><a href="#" class="fs-6 fw-medium text-black text-decoration-none">Home</a></li>
-                            <li><a href="#" class="fs-6 fw-medium text-black text-decoration-none">Shop</a></li>
-                            <li><a href="#" class="fs-6 fw-medium text-black text-decoration-none">Blog</a></li>
-                            <li><a href="#" class="fs-6 fw-medium text-black text-decoration-none">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-3">
-                    <div class="footer-content-2">
-                        <h4>Help</h4>
-                        <ul class="list-unstyled d-flex flex-column gap-4">
-                            <li class="fs-6 fw-medium">Payment Options</li>
-                            <li class="fs-6 fw-medium">Returns</li>
-                            <li class="fs-6 fw-medium">Privacy Policies</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="footer-content-3 m-3 ms-0 me-0">
-                        <h4>Newsletter</h4>
-                        <div class="input-field d-flex gap-3">
-                            <input type="text" placeholder="Enter your Emial Address">
-                            <button class="bg-transparent">SUBCRIBE</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="copy-right-content">
-                        <p class="fw-medium fs-6">2024 Furniro.All rights reserved</p>
-                    </div>
-                </div>
-            </div>
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/image 3.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">lolito</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 7.000.000</h5>
+          <s>Rp 14.000.000</s>
         </div>
-        </div>
-    </footer>
+      </div>
+    </div>
 
-    <!-- Footer end -->
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/Image 4.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Respira</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 500.000</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/Image1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Syltherine</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 2.500.000</h5>
+          <s>Rp 3.500.000</s>
+        </div>
+      </div>
+    </div>
+
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/image 2.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Leviosa</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 2.500.000</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/image 3.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">lolito</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 7.000.000</h5>
+          <s>Rp 14.000.000</s>
+        </div>
+      </div>
+    </div>
+
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/Image 4.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Respira</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 500.000</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/Image1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Syltherine</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 2.500.000</h5>
+          <s>Rp 3.500.000</s>
+        </div>
+      </div>
+    </div>
+
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/image 2.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Leviosa</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 2.500.000</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/image 3.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">lolito</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 7.000.000</h5>
+          <s>Rp 14.000.000</s>
+        </div>
+      </div>
+    </div>
+
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/Image 4.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Respira</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 500.000</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/Image1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Syltherine</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 2.500.000</h5>
+          <s>Rp 3.500.000</s>
+        </div>
+      </div>
+    </div>
+
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/image 2.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Leviosa</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 2.500.000</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/image 3.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">lolito</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 7.000.000</h5>
+          <s>Rp 14.000.000</s>
+        </div>
+      </div>
+    </div>
+
+    <div class="card rounded-0">
+      <img src="../Assets/Images/shop/card-section/Image 4.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Respira</h5>
+        <p class="card-text">Stylish cafe chair</p>
+        <div class="d-flex gap-3">
+          <h5>Rp 500.000</h5>
+        </div>
+      </div>
+    </div>
+>>>>>>> d604f09918557107333b30e14b691c05fa73de1d
+
+  </div>
+
+
+
+
+
+
+  <div class="container pb-5">
+    <div class="row gap-5 d-flex justify-content-center ">
+      <button id="p-1-btn" onclick="page_change_btn(this)" class="page-change-btn first">1</button>
+      <button id="p-2-btn" onclick="page_change_btn(this)" class="page-change-btn">2</button>
+      <button id="p-3-btn" onclick="page_change_btn(this)" class="page-change-btn">3</button>
+      <button id="p-4-btn" onclick="page_change_btn(this)" class="page-change-btn">next</button>
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- card section end -->
+
+
+  <!-- second last section start -->
+
+  <div class="container-fluid sec-last-head">
+    <div class="row  d-flex justify-content-between align-items-center">
+      <div class="col-12 col-md-6 col-xxl-3 d-flex justify-content-center">
+        <div class="row">
+          <div class="col-3">
+            <img src="../Assets/Images/shop/second-last-section/logo1.png" width="60px" height="60px" alt="">
+          </div>
+          <div class="col-9">
+            <p style="font-size: 25px ; font-weight: 600; ">High Quality</p>
+            <p>crafted from top materials</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xxl-3 d-flex justify-content-center">
+        <div class="row">
+          <div class="col-3">
+            <img src="../Assets/Images/shop/second-last-section/logo2.png" width="60px" height="60px" alt="">
+          </div>
+          <div class="col-9">
+            <p style="font-size: 25px ; font-weight: 600; ">High Quality</p>
+            <p>crafted from top materials</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-12 col-md-6 col-xxl-3 d-flex justify-content-center">
+        <div class="row">
+          <div class="col-3">
+            <img src="../Assets/Images/shop/second-last-section/logo3.png" width="60px" height="60px" alt="">
+          </div>
+          <div class="col-9">
+            <p style="font-size: 25px ; font-weight: 600; ">High Quality</p>
+            <p>crafted from top materials</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-12 col-md-6 col-xxl-3 d-flex justify-content-center">
+        <div class="row">
+          <div class="col-3">
+            <img src="../Assets/Images/shop/second-last-section/logo4.png" width="60px" height="60px" alt="">
+          </div>
+          <div class="col-9">
+            <p style="font-size: 25px ; font-weight: 600; ">High Quality</p>
+            <p>crafted from top materials</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- second last section end -->
+
+
+
+  <!-- Footer start -->
+
+  <footer>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12">
+          <div class="footer-heading w-100">
+            <div class="nav-logo d-flex align-items-center gap-2 justify-content-center">
+              <img src="../Assets/Images/home/nav/navLogo.png" width="60" height="40" alt="Nav-Logo">
+              <h2 class="m-0 fs-1">Furniro</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 mb-3">
+          <div class="footer-content-1">
+            <h4>Links</h4>
+            <ul class="list-unstyled d-flex flex-column gap-4">
+              <li><a href="#" class="fs-6 fw-medium text-black text-decoration-none">Home</a></li>
+              <li><a href="#" class="fs-6 fw-medium text-black text-decoration-none">Shop</a></li>
+              <li><a href="#" class="fs-6 fw-medium text-black text-decoration-none">Blog</a></li>
+              <li><a href="#" class="fs-6 fw-medium text-black text-decoration-none">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-3">
+          <div class="footer-content-2">
+            <h4>Help</h4>
+            <ul class="list-unstyled d-flex flex-column gap-4">
+              <li class="fs-6 fw-medium">Payment Options</li>
+              <li class="fs-6 fw-medium">Returns</li>
+              <li class="fs-6 fw-medium">Privacy Policies</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="footer-content-3 m-3 ms-0 me-0">
+            <h4>Newsletter</h4>
+            <div class="input-field d-flex gap-3">
+              <input type="text" placeholder="Enter your Emial Address">
+              <button class="bg-transparent">SUBCRIBE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="copy-right-content">
+            <p class="fw-medium fs-6">2024 Furniro.All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+  <!-- Footer end -->
 
 </body>
 
 <!-- Bootstrap Script -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <!-- Bootstrap Script -->
 
 <!-- Local Link -->
