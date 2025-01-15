@@ -1,3 +1,13 @@
+// For pre-loader
+
+const preLoader = document.querySelector(".page-loader");
+
+window.addEventListener("load", () => {
+    preLoader.style.display = "none";
+})
+
+// For pre-loader
+
 // For Navbar
 
 const sideMenu = document.getElementById("side-nav-menu");
