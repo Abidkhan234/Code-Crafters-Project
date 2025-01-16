@@ -265,15 +265,10 @@ footer {
 /* second last section end */
 
 /* cards countss section */
-.cards-countss-section {
+.filter-section-head {
     background-color: #F9F1E7;
-<<<<<<< HEAD
-    height:fit-content;
-    max-width: 100%;
-=======
     height: fit-content;
     width: 100%;
->>>>>>> d604f09918557107333b30e14b691c05fa73de1d
     overflow: hidden;
 
 
@@ -293,61 +288,21 @@ footer {
 
 }
 
-.full-card-body {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 0px 0px;
-
-
-}
-
-.card {
-    max-width: 100%;
-    width: 450px;
-    background-color: #F4F5F7;
-
-}
-
-@media (max-width : 400px) {
-    .full-card-body {
-        margin: 0%;
 
 
 
-    }
 
-}
 
-<<<<<<< HEAD
-.page-change-btn{
-    width: fit-content; 
-    padding: 15px 25px;
-     border-radius: 10px;
-     font-weight: 500;
-     font-size: larger;
-      background-color:#F9F1E7; 
-      border: none;
-=======
-@media (max-width : 850px) {
-    .full-card-body {
-        place-items: center;
-        padding: 0px 20px;
-        overflow: hidden;
 
-    }
-
-}
 
 .page-change-btn {
     width: fit-content;
-    padding: 18px 29px;
+   padding: 10px 20px;
     border-radius: 10px;
     font-weight: 500;
     font-size: larger;
     background-color: #F9F1E7;
     border: none;
->>>>>>> d604f09918557107333b30e14b691c05fa73de1d
 }
 
 
@@ -363,31 +318,30 @@ footer {
     position: relative;
 }
 
-.shop-bg-img-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
-.bg-color1,
-.first {
-    background-color: #B88E2F;
-    color: white;
-}
+
+
 
 /*<!-- page change section end--> */
 .product-section-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px 15px;
 }
 
 .product-card {
     /* background-color: hsl(220, 20%, 90%); */
+    background-color: #F4F5F7;
     position: relative;
     overflow: hidden;
     border-radius: 3px;
+}
+@media (max-width : 400px) {
+    .product-card{
+        max-width: 100%;
+        
+    }
+    
 }
 
 .product-card .card-top {
@@ -401,7 +355,7 @@ footer {
 }
 
 .product-card .card-bottom {
-    padding: 15px;
+    padding-top: px;
     padding-bottom: 7px !important;
 }
 
@@ -480,3 +434,6 @@ footer {
 .product-section-content-row-2-open {
     max-height: 100%;
 }
+/* page-change-section start */
+ 
+/* page-change-section end */
