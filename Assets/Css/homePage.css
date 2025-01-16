@@ -15,6 +15,30 @@ section {
     --primary-color: #B88E2F;
 }
 
+/* Page-loader start */
+
+.page-loader {
+    z-index: 5;
+    background-color: #FAF3EA;
+}
+
+.page-loader .loader {
+    border: 10px solid #aaa8a8;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border-top-color: #333;
+    animation: rotate 1s linear 0s infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Page-loader end*/
+
 /* Navbar start */
 
 nav .nav-logo h2 {
@@ -159,6 +183,22 @@ nav .nav-icons span {
 }
 
 /* For Cart list */
+
+/* For cart-list overlay */
+
+.cart-list-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: -1;
+    transition: all 1s;    
+}
+
+.cart-list-overlay-show{
+    z-index: 2;
+    opacity: 1;
+}
+
+/* For cart-list overlay */
 
 /* For Navbar */
 
