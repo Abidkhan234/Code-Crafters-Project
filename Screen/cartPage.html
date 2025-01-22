@@ -2,12 +2,9 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Contact</title>
-
+    <title>Cart</title>
     <link rel="shortcut icon" href="../Assets/Images/title-icon/Title-Icon.png" type="image/x-icon">
 
     <!-- Bootstrap link -->
@@ -21,19 +18,29 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Font Awesome CDN -->
 
-    <link rel="stylesheet" href="../Assets/Css/contactPage.css">
+    <link rel="stylesheet" href="../Assets/Css/cartPage.css">
+
 
 </head>
 
 <body>
 
+    <!-- page-loader start -->
+
+    <div class="page-loader position-fixed top-0 start-0 end-0 bottom-0 h-100 w-100">
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <!-- page-loader end -->
 
     <!-- Navbar start -->
 
     <nav
-        class="bg-white z-2 position-fixed top-0 left-0 right-0 ps-sm-5 pe-sm-5 pt-2 pb-2 d-flex w-100 justify-content-between align-items-center flex-wrap">
+        class="bg-white z-3 position-fixed top-0 left-0 right-0 ps-sm-5 pe-sm-5 pt-2 pb-2 d-flex w-100 justify-content-between align-items-center flex-wrap">
         <div class="nav-logo d-flex gap-2 align-items-center">
-            <img src="../Assets/Images/contact/nav/navLogo.png" width="50" height="32" alt="Nav-Logo">
+            <img src="../Assets/Images/cart/nav/navLogo.png" width="50" height="32" alt="Nav-Logo">
             <h2 class="m-0">Furniro</h2>
         </div>
 
@@ -42,14 +49,14 @@
                 <li><a href="../index.html" class="text-decoration-none fs-5 text-black">Home</a></li>
                 <li><a href="./shopPage.html" class="text-decoration-none fs-5 text-black">Shop</a></li>
                 <li><a href="./blogPage.html" class="text-decoration-none fs-5 text-black">Blog</a></li>
-                <li><a href="#" class="text-decoration-none fs-5 text-black">Contact</a></li>
+                <li><a href="./contactPage.html" class="text-decoration-none fs-5 text-black">Contact</a></li>
             </ul>
         </div>
 
         <div class="side-nav-menu p-3 pt-5" id="side-nav-menu">
             <i class="fas fa-xmark fs-3 position-absolute top-0 end-0 text-white" id="nav-cross"></i>
             <div class="nav-logo d-flex gap-2">
-                <img src="../Assets/Images/contact/nav/navLogo.png" width="50" height="32" alt="Nav-Logo">
+                <img src="../Assets/Images/cart/nav/navLogo.png" width="50" height="32" alt="Nav-Logo">
                 <h2 class="m-0">Furniro</h2>
             </div>
 
@@ -59,8 +66,7 @@
                 </li>
                 <li><a href="./blogPage.html" class="text-decoration-none fs-5 fw-medium text-black">Blog</a>
                 </li>
-                <li><a href="#"
-                        class="text-decoration-none fs-5 fw-medium text-black">Contact</a></li>
+                <li><a href="./contactPage.html" class="text-decoration-none fs-5 fw-medium text-black">Contact</a></li>
             </ul>
         </div>
 
@@ -81,7 +87,7 @@
         <div class="cart-top pb-3 d-flex justify-content-between align-items-center">
             <h2 class="m-0 fw-bold fs-4">Shopping Cart</h2>
             <div class="cart-list-close position-relative">
-                <img src="../Assets/Images/contact/nav/cart-close.png" alt="..." width="22" height="22">
+                <img src="../Assets/Images/cart/nav/cart-close.png" alt="..." width="22" height="22">
                 <i class="fas fa-xmark position-absolute" id="cart-close-btn"></i>
             </div>
         </div>
@@ -106,7 +112,7 @@
 
                         <div class="cart-bottom-btns d-flex justify-content-between flex-wrap gap-2">
 
-                            <a href="./cartPage.html"><button class="fs-6 fw-medium bg-transparent">Cart</button></a>
+                            <a href="#"><button class="fs-6 fw-medium bg-transparent">Cart</button></a>
 
                             <a href="./checkoutpage.html"><button
                                     class="fs-6 fw-medium bg-transparent">Checkout</button></a>
@@ -121,13 +127,13 @@
 
         </div>
 
-
     </div>
 
+    <div class="cart-list-overlay position-fixed top-0 start-0 end-0 bottom-0 w-100 h-100"></div>
 
     <!-- Navbar end -->
 
-    <!-- hero-section start -->
+    <!-- Hero-section start -->
 
     <section class="hero-section">
         <div class="container-fluid overflow-hidden">
@@ -137,8 +143,8 @@
                         class="hero-info-box position-absolute d-flex flex-column align-items-center gap-3 text-center">
                         <img src="../Assets/Images/contact/nav/navLogo.png" alt="...">
                         <div class="info-text">
-                            <h1 class="mb-3 fw-medium">Contact</h1>
-                            <p class="fw-medium fs-6 m-0">Home > Contact</p>
+                            <h1 class="mb-3 fw-medium">Cart</h1>
+                            <p class="fw-medium fs-6 m-0">Home > Cart</p>
                         </div>
                     </div>
                 </div>
@@ -146,88 +152,7 @@
         </div>
     </section>
 
-    <!-- hero-section end-->
-
-    <!-- contact-section start -->
-
-    <section class="contact-section">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12">
-                    <div class="heading d-flex align-items-center flex-column text-center">
-                        <h2 class="fw-bold">Get In Touch With Us</h2>
-                        <p class="fw-medium fs-6">For More Information About Our Product & Services. Please Feel Free To
-                            Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 mb-5 ">
-                    <div class="content-company-info d-flex flex-column gap-4 h-100 justify-content-center">
-                        <div class="address-info d-flex gap-4 align-items-start">
-                            <i class="fas fa-location-dot fs-5"></i>
-                            <div class="address-content">
-                                <h4 class="m-0 fs-5 fw-semibold">Address</h4>
-                                <p class="m-0">236 5th SE Avenue, New York NY10000, United States</p>
-                            </div>
-                        </div>
-                        <div class="phone-info d-flex gap-4 align-items-start">
-                            <i class="fas fa-phone fs-5"></i>
-                            <div class="address-content">
-                                <h4 class="m-0 fs-5 fw-semibold">Phone</h4>
-                                <p class="m-0">Mobile: +(84) 546-6789 <br> Hotline: +(84) 456-6789</p>
-                            </div>
-                        </div>
-                        <div class="working-info d-flex gap-4 align-items-start">
-                            <i class="fas fa-clock fs-5"></i>
-                            <div class="address-content">
-                                <h4 class="m-0 fs-5 fw-semibold">Working Time</h4>
-                                <p class="m-0">Monday-Friday: 9:00 - 22:00 <br> Saturday-Sunday: 9:00 - 21:00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-
-                    <div class="contact-inputs d-flex flex-column gap-4">
-                        <div class="input-field d-flex flex-column gap-2">
-                            <label for="name" class="fs-6 fw-medium ms-2">Your name</label>
-                            <input type="text" id="name" class="p-3 rounded-3 fs-6 fw-medium"
-                                placeholder="Enter your name" autocomplete="off">
-                        </div>
-                        <div class="input-field d-flex flex-column gap-2">
-                            <label for="name" class="fs-6 fw-medium ms-2">Email address</label>
-                            <input type="text" id="name" class="p-3 rounded-3 fs-6 fw-medium"
-                                placeholder="Enter your email address" autocomplete="off">
-                        </div>
-                        <div class="input-field d-flex flex-column gap-2">
-                            <label for="name" class="fs-6 fw-medium ms-2">Subject</label>
-                            <input type="text" id="name" class="p-3 rounded-3 fs-6 fw-medium"
-                                placeholder="Enter your subject  'Optional'" autocomplete="off">
-                        </div>
-                        <div class="contact-message d-flex flex-column gap-2">
-                            <label for="message" class="fs-6 fw-medium ms-2">Message</label>
-                            <textarea placeholder="Write a message" id="message"
-                                class="p-3 rounded-3 fs-6 fw-medium"></textarea>
-                        </div>
-
-                        <div class="contact-submit-btn">
-                            <button class="fs-6 fw-medium ps-5 pe-5 pt-2 pb-2 rounded-1">Submit</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- contact-section end -->
-
-    <!-- warranty-section start -->
-
-
-
-    <!-- warranty-section end -->
+    <!-- Hero-section end -->
 
     <!-- Footer start -->
 
@@ -237,7 +162,7 @@
                 <div class="col-12">
                     <div class="footer-heading w-100">
                         <div class="nav-logo d-flex align-items-center gap-2 justify-content-center">
-                            <img src="../Assets/Images/contact/nav/navLogo.png" width="60" height="40" alt="Nav-Logo">
+                            <img src="../Assets/Images/cart/nav/navLogo.png" width="60" height="40" alt="Nav-Logo">
                             <h2 class="m-0 fs-1">Furniro</h2>
                         </div>
                     </div>
@@ -248,10 +173,10 @@
                     <div class="footer-content-1">
                         <h4>Links</h4>
                         <ul class="list-unstyled d-flex flex-column gap-4">
-                            <li><a href="#" class="fs-6 fw-medium text-black text-decoration-none">Home</a></li>
-                            <li><a href="#" class="fs-6 fw-medium text-black text-decoration-none">Shop</a></li>
-                            <li><a href="#" class="fs-6 fw-medium text-black text-decoration-none">Blog</a></li>
-                            <li><a href="#" class="fs-6 fw-medium text-black text-decoration-none">Contact</a></li>
+                            <li><a href="../index.html" class="fs-6 fw-medium text-black text-decoration-none">Home</a></li>
+                            <li><a href="./shopPage.html" class="fs-6 fw-medium text-black text-decoration-none">Shop</a></li>
+                            <li><a href="./blogPage.html" class="fs-6 fw-medium text-black text-decoration-none">Blog</a></li>
+                            <li><a href="./contactPage.html" class="fs-6 fw-medium text-black text-decoration-none">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -288,18 +213,17 @@
 
     <!-- Footer end -->
 
+
 </body>
 
 <!-- Bootstrap Script -->
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
 <!-- Bootstrap Script -->
 
 <!-- Local Link -->
-<script src="../Assets/JS/contactPage.js"></script>
+<script src="../Assets/JS/cartPage.js"></script>
 <!-- Local Link -->
 
 </html>

@@ -15,6 +15,30 @@ section {
     --primary-color: #B88E2F;
 }
 
+/* Page-loader start */
+
+.page-loader {
+    z-index: 5;
+    background-color: #FAF3EA;
+}
+
+.page-loader .loader {
+    border: 10px solid #aaa8a8;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border-top-color: #333;
+    animation: rotate 1s linear 0s infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Page-loader end*/
+
 /* Navbar start */
 
 nav .nav-logo h2 {
@@ -160,6 +184,22 @@ nav .nav-icons span {
 
 /* For Cart list */
 
+/* For cart-list overlay */
+
+.cart-list-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.cart-list-overlay-show {
+    z-index: 2;
+    opacity: 1;
+}
+
+/* For cart-list overlay */
+
 /* For Navbar */
 
 @media (max-width:992px) {
@@ -204,7 +244,7 @@ nav .nav-icons span {
 /* hero-section start */
 
 .hero-section {
-    background-image: url(../Images/contact/hero-section/hero-section-image.png);
+    background-image: url(../Images/cart/hero-section/hero-section-image.png);
     background-size: cover;
     background-position: center center;
     height: 50vh;
@@ -218,68 +258,7 @@ nav .nav-icons span {
     transform: translate(-50%, -50%);
 }
 
-
 /* hero-section end */
-
-/* post-section start */
-
-.post-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.post-section .image-post-info p,
-.post-section .image-post-info i {
-    color: #9F9F9F;
-}
-
-.image-description .image-description-btn button {
-    border: none;
-    outline: none;
-    background: transparent;
-    position: relative;
-}
-
-.image-description .image-description-btn button::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 6px;
-    width: 80%;
-    height: 2px;
-    background-color: black;
-}
-
-.image-description p {
-    color: #9F9F9F;
-}
-
-.pagination-btns button {
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-weight: 500;
-    font-size: 17px;
-    outline: none;
-    transition: all 0.3s;
-}
-
-.pagination-btns button.checked {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* post-section end */
-
-
-/* Warranty-section start */
-
-
-
-/* Warranty-section  end*/
-
-
 
 /* footer start */
 

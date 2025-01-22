@@ -336,10 +336,10 @@ footer {
 
 /* <!-- page change section start-->*/
 .shop-bg-img {
-    background-image: url(../Images/contact/hero-section/hero-section-image.png);
+    background-image: url(../Images/shop/hero-section/hero-section-image.png);
     background-size: cover;
     background-position: center center;
-    height: 60vh;
+    height: 50vh;
     width: 100%;
     position: relative;
 }
