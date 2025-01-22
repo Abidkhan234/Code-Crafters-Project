@@ -311,21 +311,25 @@ footer {
 }
 
 
-
-
-
-
-
-
-.page-change-btn {
-    width: fit-content;
-   padding: 10px 20px;
+.product-section .pagination-btns button {
     border-radius: 10px;
+    padding: 10px 20px;
     font-weight: 500;
-    font-size: larger;
-    background-color: #F9F1E7;
-    border: none;
+    font-size: 17px;
+    outline: none;
+    transition: all 0.3s;
 }
+
+.product-section .pagination-btns button.checked {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+
+
+
+
 
 
 /* card section end */
@@ -358,12 +362,13 @@ footer {
     overflow: hidden;
     border-radius: 3px;
 }
+
 @media (max-width : 400px) {
-    .product-card{
+    .product-card {
         max-width: 100%;
-        
+
     }
-    
+
 }
 
 .product-card .card-top {
@@ -456,6 +461,7 @@ footer {
 .product-section-content-row-2-open {
     max-height: 100%;
 }
+
 /* page-change-section start */
- 
+
 /* page-change-section end */

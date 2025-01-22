@@ -41,8 +41,410 @@ cartCloseBtn.addEventListener("click", () => {
 
 const products = [
     {
-        title : "",
-    }
+        image: "../Assets/Images/shop/card-section/image1.png",
+        price: "150",
+        cutPrice: "$ 180",
+        title: "Syltherine",
+        subTitle: "Stylish cafe chair",
+        dis: "-30%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image2.png",
+        price: "180",
+        cutPrice: "",
+        title: "Leviosa",
+        subTitle: "Stylish cafe Table",
+        dis: "0%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image3.png",
+        price: "200",
+        cutPrice: "$ 400",
+        title: "Lolito",
+        subTitle: "Luxury big sofa",
+        dis: "-50%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image4.png",
+        price: "400",
+        cutPrice: "",
+        title: "Respira",
+        subTitle: "Outdoor bar table and stool",
+        dis: "0%"
+    },
+
+
+    {
+        image: "../Assets/Images/shop/card-section/image3.png",
+        price: "200",
+        cutPrice: "$ 400",
+        title: "Lolito",
+        subTitle: "Luxury big sofa",
+        dis: "-50%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image4.png",
+        price: "400",
+        cutPrice: "",
+        title: "Respira",
+        subTitle: "Outdoor bar table and stool",
+        dis: "0%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image1.png",
+        price: "150",
+        cutPrice: "$ 180",
+        title: "Syltherine",
+        subTitle: "Stylish cafe chair",
+        dis: "-30%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image2.png",
+        price: "180",
+        cutPrice: "",
+        title: "Leviosa",
+        subTitle: "Stylish cafe Table",
+        dis: "0%"
+    },
+
+
+    {
+        image: "../Assets/Images/shop/card-section/image1.png",
+        price: "150",
+        cutPrice: "$ 180",
+        title: "Syltherine",
+        subTitle: "Stylish cafe chair",
+        dis: "-30%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image2.png",
+        price: "180",
+        cutPrice: "",
+        title: "Leviosa",
+        subTitle: "Stylish cafe Table",
+        dis: "0%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image3.png",
+        price: "200",
+        cutPrice: "$ 400",
+        title: "Lolito",
+        subTitle: "Luxury big sofa",
+        dis: "-50%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image4.png",
+        price: "400",
+        cutPrice: "",
+        title: "Respira",
+        subTitle: "Outdoor bar table and stool",
+        dis: "0%"
+    },
+
+    {
+        image: "../Assets/Images/shop/card-section/image2.png",
+        price: "200",
+        cutPrice: "$ 400",
+        title: "Lolito",
+        subTitle: "Luxury big sofa",
+        dis: "-50%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image3.png",
+        price: "400",
+        cutPrice: "",
+        title: "Respira",
+        subTitle: "Outdoor bar table and stool",
+        dis: "0%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image4.png",
+        price: "200",
+        cutPrice: "$ 400",
+        title: "Lolito",
+        subTitle: "Luxury big sofa",
+        dis: "-50%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image1.png",
+        price: "400",
+        cutPrice: "",
+        title: "Respira",
+        subTitle: "Outdoor bar table and stool",
+        dis: "0%"
+    },
+
+
+
+    {
+        image: "../Assets/Images/shop/card-section/image4.png",
+        price: "150",
+        cutPrice: "$ 180",
+        title: "Syltherine",
+        subTitle: "Stylish cafe chair",
+        dis: "-30%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image1.png",
+        price: "180",
+        cutPrice: "",
+        title: "Leviosa",
+        subTitle: "Stylish cafe Table",
+        dis: "0%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image3.png",
+        price: "200",
+        cutPrice: "$ 400",
+        title: "Lolito",
+        subTitle: "Luxury big sofa",
+        dis: "-50%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image2.png",
+        price: "400",
+        cutPrice: "",
+        title: "Respira",
+        subTitle: "Outdoor bar table and stool",
+        dis: "0%"
+    },
+
+
+    {
+        image: "../Assets/Images/shop/card-section/image3.png",
+        price: "200",
+        cutPrice: "$ 400",
+        title: "Lolito",
+        subTitle: "Luxury big sofa",
+        dis: "-50%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image4.png",
+        price: "400",
+        cutPrice: "",
+        title: "Respira",
+        subTitle: "Outdoor bar table and stool",
+        dis: "0%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image1.png",
+        price: "150",
+        cutPrice: "$ 180",
+        title: "Syltherine",
+        subTitle: "Stylish cafe chair",
+        dis: "-30%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image2.png",
+        price: "180",
+        cutPrice: "",
+        title: "Leviosa",
+        subTitle: "Stylish cafe Table",
+        dis: "0%"
+    },
+
+
+    {
+        image: "../Assets/Images/shop/card-section/image1.png",
+        price: "150",
+        cutPrice: "$ 180",
+        title: "Syltherine",
+        subTitle: "Stylish cafe chair",
+        dis: "-30%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image2.png",
+        price: "180",
+        cutPrice: "",
+        title: "Leviosa",
+        subTitle: "Stylish cafe Table",
+        dis: "0%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image3.png",
+        price: "200",
+        cutPrice: "$ 400",
+        title: "Lolito",
+        subTitle: "Luxury big sofa",
+        dis: "-50%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image4.png",
+        price: "400",
+        cutPrice: "",
+        title: "Respira",
+        subTitle: "Outdoor bar table and stool",
+        dis: "0%"
+    },
+
+    {
+        image: "../Assets/Images/shop/card-section/image1.png",
+        price: "200",
+        cutPrice: "$ 400",
+        title: "Lolito",
+        subTitle: "Luxury big sofa",
+        dis: "-50%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image4.png",
+        price: "400",
+        cutPrice: "",
+        title: "Respira",
+        subTitle: "Outdoor bar table and stool",
+        dis: "0%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image2.png",
+        price: "200",
+        cutPrice: "$ 400",
+        title: "Lolito",
+        subTitle: "Luxury big sofa",
+        dis: "-50%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image3.png",
+        price: "400",
+        cutPrice: "",
+        title: "Respira",
+        subTitle: "Outdoor bar table and stool",
+        dis: "0%"
+    },
+
+
+    {
+        image: "../Assets/Images/shop/card-section/image1.png",
+        price: "150",
+        cutPrice: "$ 180",
+        title: "Syltherine",
+        subTitle: "Stylish cafe chair",
+        dis: "-30%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image4.png",
+        price: "180",
+        cutPrice: "",
+        title: "Leviosa",
+        subTitle: "Stylish cafe Table",
+        dis: "0%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image2.png",
+        price: "200",
+        cutPrice: "$ 400",
+        title: "Lolito",
+        subTitle: "Luxury big sofa",
+        dis: "-50%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image3.png",
+        price: "400",
+        cutPrice: "",
+        title: "Respira",
+        subTitle: "Outdoor bar table and stool",
+        dis: "0%"
+    },
+
+
+    {
+        image: "../Assets/Images/shop/card-section/image3.png",
+        price: "200",
+        cutPrice: "$ 400",
+        title: "Lolito",
+        subTitle: "Luxury big sofa",
+        dis: "-50%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image4.png",
+        price: "400",
+        cutPrice: "",
+        title: "Respira",
+        subTitle: "Outdoor bar table and stool",
+        dis: "0%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image1.png",
+        price: "150",
+        cutPrice: "$ 180",
+        title: "Syltherine",
+        subTitle: "Stylish cafe chair",
+        dis: "-30%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image2.png",
+        price: "180",
+        cutPrice: "",
+        title: "Leviosa",
+        subTitle: "Stylish cafe Table",
+        dis: "0%"
+    },
+
+
+    {
+        image: "../Assets/Images/shop/card-section/image4.png",
+        price: "150",
+        cutPrice: "$ 180",
+        title: "Syltherine",
+        subTitle: "Stylish cafe chair",
+        dis: "-30%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image1.png",
+        price: "180",
+        cutPrice: "",
+        title: "Leviosa",
+        subTitle: "Stylish cafe Table",
+        dis: "0%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image3.png",
+        price: "200",
+        cutPrice: "$ 400",
+        title: "Lolito",
+        subTitle: "Luxury big sofa",
+        dis: "-50%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image2.png",
+        price: "400",
+        cutPrice: "",
+        title: "Respira",
+        subTitle: "Outdoor bar table and stool",
+        dis: "0%"
+    },
+
+    {
+        image: "../Assets/Images/shop/card-section/image1.png",
+        price: "200",
+        cutPrice: "$ 400",
+        title: "Lolito",
+        subTitle: "Luxury big sofa",
+        dis: "-50%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image2.png",
+        price: "400",
+        cutPrice: "",
+        title: "Respira",
+        subTitle: "Outdoor bar table and stool",
+        dis: "0%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image3.png",
+        price: "200",
+        cutPrice: "$ 400",
+        title: "Lolito",
+        subTitle: "Luxury big sofa",
+        dis: "-50%"
+    },
+    {
+        image: "../Assets/Images/shop/card-section/image4.png",
+        price: "400",
+        cutPrice: "",
+        title: "Respira",
+        subTitle: "Outdoor bar table and stool",
+        dis: "0%"
+    },
+
 ];
 
 const firstBtn = document.getElementById("1-btn");
@@ -59,56 +461,53 @@ let thirdValue = parseFloat(thirdBtn.innerText);
 
 const paginationFunction = (num) => {
 
-    let totalItemPerPage = 8;
-
-    const productContent = document.querySelector(".product-section-content");
-
-    productContent.innerHTML = "";
-
-    const creatingItem = (start, end) => {
-
-        products.slice(start, end).forEach((item) => {
-
-            const productCard = document.createElement("div");
-
-            productCard.classList.add("product-card");
-
-            productCard.innerHTML += `
-            
-               <div class="card-top">
-                                    <img src="${item.image}" alt="...">
-                                    <span class="bg-danger position-absolute text-white top-0 end-0 p-2">-30%</span>
-                                </div>
-                                <div class="card-bottom pt-0 d-flex gap-2 flex-column">
-                                    <h5 class="fw-semibold">${item.title}</h5>
-                                    <p class="text-black fw-medium m-0">${item.price}</p>
-                                </div>
-                                <div class="card-overlay-content text-center d-flex flex-column gap-3 align-items-center">
-                                    <button class="add-item">Add to cart</button>
-                                    <div class="urls d-flex">
-                                        <i class="fas fa-share-nodes fs-6 text-white align-content-center"></i><a href="#"
-                                            class="text-white text-decoration-none ms-1 me-3">Share</a>
-                                        <i class="fas fa-arrow-right-arrow-left fs-6 text-white align-content-center"></i><a
-                                            href="#" class="text-white text-decoration-none ms-1 me-3">Compare</a>
-                                        <i class="fa-regular fa-heart fs-6 text-white align-content-center"></i><a href="#"
-                                            class="text-white text-decoration-none ms-1">Like</a>
-                                    </div>
-                                </div>
-                                <div class="card-overlay"></div>
-    
-            
-            `;
-
-            productContent.appendChild(productCard);
-        });
-
-    }
+    let totalItemPerPage = 16;
 
     let startIndex = (num - 1) * totalItemPerPage;
 
     let endIndex = num * totalItemPerPage;
 
-    creatingItem(startIndex, endIndex);
+    const productContent = document.querySelector(".product-section-content");
+
+    productContent.innerHTML = "";
+
+    products.slice(startIndex, endIndex).forEach((item) => {
+        const prodectCard = document.createElement("div");
+        prodectCard.classList.add("product-card");
+
+        prodectCard.innerHTML = `
+        <div class="card-top">
+                <img src="${item.image}" alt="...">
+                <span class="bg-danger position-absolute text-white top-0 end-0 p-2">${item.dis}</span>
+              </div>
+              <div class="card-bottom ps-3 pt-0 d-flex gap-2 flex-column">
+                <h5 class="fw-semibold">${item.title}</h5>
+                <p>${item.subTitle}</p>
+                <div class="d-flex gap-3">
+                  <p style="font-size: large; font-weight: 600;" class="text-black fw-medium m-0">$ ${item.price}</p>
+                  <s style="font-size: large; font-weight: 500;">${item.cutPrice}</s>
+                </div>
+              </div>
+              <div class="card-overlay-content text-center d-flex flex-column gap-3 align-items-center">
+                <button class="add-item">Add to cart</button>
+                <div class="urls d-flex">
+                  <i class="fas fa-share-nodes fs-6 text-white align-content-center"></i><a href="#"
+                    class="text-white text-decoration-none ms-1 me-3">Share</a>
+                  <i class="fas fa-arrow-right-arrow-left fs-6 text-white align-content-center"></i><a href="#"
+                    class="text-white text-decoration-none ms-1 me-3">Compare</a>
+                  <i class="fa-regular fa-heart fs-6 text-white align-content-center"></i><a href="#"
+                    class="text-white text-decoration-none ms-1">Like</a>
+                </div>
+              </div>
+              <div class="card-overlay"></div>
+            </div>
+
+        
+        `;
+
+        productContent.appendChild(prodectCard);
+
+    });
 
 }
 
