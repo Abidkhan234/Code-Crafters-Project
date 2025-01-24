@@ -15,6 +15,30 @@ section {
     --primary-color: #B88E2F;
 }
 
+/* Page-loader start */
+
+.page-loader {
+    z-index: 5;
+    background-color: #FAF3EA;
+}
+
+.page-loader .loader {
+    border: 10px solid lightgray;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: rotate 1s linear 0s infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Page-loader end*/
+
 /* Navbar start */
 
 nav .nav-logo h2 {
@@ -232,7 +256,7 @@ nav .nav-icons span {
     color: #333;
 }
 
-.contact-inputs input{
+.contact-inputs input {
     border: 1px solid #9F9F9F;
     outline: none;
 }
@@ -242,7 +266,7 @@ nav .nav-icons span {
     outline: none;
 }
 
-.contact-inputs .contact-submit-btn button{
+.contact-inputs .contact-submit-btn button {
     border: none;
     outline: none;
     background-color: var(--primary-color);
@@ -326,8 +350,8 @@ footer {
 /* For footer */
 
 /* footer end */
-.sec-last-head{
-    background-color:#FAF3EA ;
+.sec-last-head {
+    background-color: #FAF3EA;
     padding-top: 150px;
     padding-bottom: 100px;
     width: 100%;
