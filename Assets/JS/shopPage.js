@@ -574,7 +574,9 @@ addToCartBtns.forEach((buttton) => {
 const addToCart = (event) => {
 
     const productTitle = event.querySelector(".card-bottom h5").innerText;
+
     const productPrice = event.querySelector(".card-bottom .item-price").innerText;
+
     const productImage = event.querySelector(".card-top img").src;
 
     const cartContent = document.querySelector(".cart-content");
@@ -593,6 +595,16 @@ const addToCart = (event) => {
             return;
         }
     }
+
+    const productContentObj = JSON.parse(sessionStorage.getItem("productContentObj")) || [];
+
+    productContentObj.unshift({
+        imageSrc: productImage,
+        title: productTitle,
+        price: productPrice
+    });
+
+    sessionStorage.setItem("productContentObj", JSON.stringify(productContentObj));
 
     // For Duplicate Item Checking end
 
@@ -733,10 +745,14 @@ const DirectingFunc = () => {
 
     if (reference.includes("index.html")) {
         fromEle.innerText = "Home";
-    }else if(reference.includes("contactPage.html")){
+    } else if (reference.includes("contactPage.html")) {
         fromEle.innerText = "Contact";
-    }else if(reference.includes("blogPage.html")){
+    } else if (reference.includes("blogPage.html")) {
         fromEle.innerText = "Blog";
+    } else if (reference.includes("cartPage.html")) {
+        fromEle.innerText = "Cart";
+    } else if (reference.includes("checkoutpage.html")) {
+        fromEle.innerText = "Checkout";
     }
 
 }
