@@ -4,6 +4,7 @@ const preLoader = document.querySelector(".page-loader");
 
 window.addEventListener("load", () => {
     preLoader.style.display = "none";
+    DirectingFunc()
 })
 
 // For pre-loader
@@ -122,6 +123,7 @@ const paginationFunc = (num) => {
         const postSectionContent = document.createElement("div");
 
         postSectionContent.classList.add("post-container");
+        postSectionContent.setAttribute("data-aos", "fade-up");
 
         postSectionContent.innerHTML += `
 
@@ -209,3 +211,28 @@ const activeLink = (btn) => {
 }
 
 // For active link functionnality
+
+// For re-Directing func
+
+const fromEle = document.getElementById("from");
+
+const toEle = document.getElementById("to");
+
+const DirectingFunc = () => {
+    const reference = document.referrer;
+
+    if (reference.includes("index.html")) {
+        fromEle.innerText = "Home";
+    } else if (reference.includes("shopPage.html")) {
+        fromEle.innerText = "Shop";
+    } else if (reference.includes("contactPage.html")) {
+        fromEle.innerText = "Contact";
+    } else if (reference.includes("checkoutpage.html")) {
+        fromEle.innerText = "Checkout";
+    } else if (reference.includes("cartPage.html")) {
+        fromEle.innerText = "Cart";
+    }   
+
+}
+
+// For re-Directing func

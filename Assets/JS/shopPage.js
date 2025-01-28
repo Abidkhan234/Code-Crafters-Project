@@ -4,6 +4,7 @@ const preLoader = document.querySelector(".page-loader");
 
 window.addEventListener("load", () => {
     preLoader.style.display = "none";
+    DirectingFunc()
 })
 
 // For pre-loader
@@ -485,6 +486,7 @@ const paginationFunction = (num) => {
     products.slice(startIndex, endIndex).forEach((item) => {
         const prodectCard = document.createElement("div");
         prodectCard.classList.add("product-card");
+        prodectCard.setAttribute("data-aos", "fade-up");
 
         prodectCard.innerHTML = `
         <div class="card-top">
@@ -718,3 +720,26 @@ const cartTotalItemCount = () => {
 }
 
 // For cart item count
+
+
+// For page re-directing func
+
+const fromEle = document.getElementById("from");
+
+const toEle = document.getElementById("to");
+
+const DirectingFunc = () => {
+    const reference = document.referrer;
+
+    if (reference.includes("index.html")) {
+        fromEle.innerText = "Home";
+    }else if(reference.includes("contactPage.html")){
+        fromEle.innerText = "Contact";
+    }else if(reference.includes("blogPage.html")){
+        fromEle.innerText = "Blog";
+    }
+
+}
+
+
+// For page re-directing func

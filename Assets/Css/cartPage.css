@@ -27,7 +27,7 @@ section {
     height: 120px;
     width: 120px;
     border-radius: 50%;
-    border-top-color: #333;
+    border-top-color: var(--primary-color);
     animation: rotate 1s linear 0s infinite;
 }
 

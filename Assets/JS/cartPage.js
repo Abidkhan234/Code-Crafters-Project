@@ -4,6 +4,7 @@ const preLoader = document.querySelector(".page-loader");
 
 window.addEventListener("load", () => {
     preLoader.style.display = "none";
+    DirectingFunc()
 })
 
 // For pre-loader
@@ -47,3 +48,25 @@ cartCloseBtn.addEventListener("click", () => {
 })
 
 // For cart open and close
+
+// For re-Directing func
+const fromEle = document.getElementById("from");
+
+const toEle = document.getElementById("to");
+
+const DirectingFunc = () => {
+    const reference = document.referrer;
+
+    if (reference.includes("index.html")) {
+        fromEle.innerText = "Home";
+    } else if (reference.includes("shopPage.html")) {
+        fromEle.innerText = "Shop";
+    } else if (reference.includes("blogPage.html")) {
+        fromEle.innerText = "Blog";
+    } else if (reference.includes("checkoutpage.html")) {
+        fromEle.innerText = "Checkout";
+    }
+
+}
+
+// For re-Directing func

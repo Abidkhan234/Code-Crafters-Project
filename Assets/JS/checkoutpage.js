@@ -4,6 +4,7 @@ const preLoader = document.querySelector(".page-loader");
 
 window.addEventListener("load", () => {
     preLoader.style.display = "none";
+    DirectingFunc()
 })
 
 // For pre-loader
@@ -49,16 +50,41 @@ cartCloseBtn.addEventListener("click", () => {
 
 const cartListItem = document.querySelectorAll(".item");
 
-const removingItem = () =>{
+const removingItem = () => {
 
     cartListItem.forEach((value) => {
         const slectedItem = value.querySelector(".item-cancel i");
-    
+
         slectedItem.addEventListener("click", (e) => {
             e.target.parentElement.parentElement.parentElement.remove();
         })
     })
-    
+
 };
 
 // For cart item remove
+
+// For re-Directing func
+const fromEle = document.getElementById("from");
+
+const toEle = document.getElementById("to");
+
+const DirectingFunc = () => {
+
+    const reference = document.referrer;
+
+    if (reference.includes("index.html")) {
+        fromEle.innerText = "Home";
+    } else if (reference.includes("shopPage.html")) {
+        fromEle.innerText = "Shop";
+    } else if (reference.includes("blogPage.html")) {
+        fromEle.innerText = "Blog";
+    }else if (reference.includes("cartPage.html")) {
+        fromEle.innerText = "Cart";
+    }else if (reference.includes("contactPage.html")) {
+        fromEle.innerText = "Contact";
+    }
+
+}
+
+// For re-Directing func
