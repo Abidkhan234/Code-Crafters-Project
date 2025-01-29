@@ -4,7 +4,8 @@ const preLoader = document.querySelector(".page-loader");
 
 window.addEventListener("load", () => {
     preLoader.style.display = "none";
-    DirectingFunc()
+    DirectingFunc();
+    gettingDataFunc();
 })
 
 // For pre-loader
@@ -65,6 +66,8 @@ const DirectingFunc = () => {
         fromEle.innerText = "Blog";
     } else if (reference.includes("checkoutpage.html")) {
         fromEle.innerText = "Checkout";
+    } else if (reference.includes("contactPage.html")) {
+        fromEle.innerText = "Contact";
     }
 
 }
@@ -78,8 +81,15 @@ const storageData = JSON.parse(sessionStorage.getItem("productContentObj"));
 const tableBody = document.querySelector("#table-body");
 
 const gettingDataFunc = () => {
+    let existingTitles = [];
 
     storageData.forEach((v) => {
+
+        if(existingTitles.includes(v.title)){
+            return;
+        }
+
+        existingTitles.push(v.title);
 
         const tr = document.createElement("tr");
 
@@ -88,7 +98,7 @@ const gettingDataFunc = () => {
                             <img src="${v.imageSrc}" alt="">
                         </td>
                         <td>
-                            <span class="cl">${v.title}</span>
+                            <span class="cl item-title">${v.title}</span>
                         </td>
                         <td class="cl item-price">${v.price}</td>
                         <td><input type="number" value="1" min="1" class="item-quantity" style="width: 50px;"></td>
@@ -101,38 +111,70 @@ const gettingDataFunc = () => {
     });
 
     // For item-remove Func
-
-    const removeItemElelment = document.querySelectorAll(".remove-item");
-
-    removeItemElelment.forEach((v) => {
-        v.addEventListener("click", (event) => {
-            let parentElement = event.target.closest("tr");
-
-            parentElement.remove();
-        })
-    })
-
+    removeItem();
     // For item-remove Func
 
 
     // For quantity change price
+
     const QuantityEle = tableBody.querySelectorAll(".item-quantity");
 
     QuantityEle.forEach((v) => {
-        v.addEventListener("change", () => totalPriceUpdate(tableBody));
+        v.addEventListener("change", () => {
+            totalPriceUpdate(tableBody);
+            grandTotalFunc();
+        });
     })
 
     // For quantity change price
+
 
     // For total price
     totalPriceUpdate(tableBody);
     // For total price
 
+
+    // For grand total price
+    grandTotalFunc();
+    // For grand total price
 }
 
-window.addEventListener("load", () => gettingDataFunc());
-
 // Geting Data from local stroage
+
+// For item remove
+
+const removeItem = () => {
+
+    const removeItemElelment = document.querySelectorAll(".remove-item");
+
+    removeItemElelment.forEach((v) => {
+
+        v.addEventListener("click", (event) => {
+
+            let parentElement = event.target.closest("tr");
+
+            let itemTitle = parentElement.querySelector(".item-title").innerText;
+
+            let storageData = JSON.parse(sessionStorage.getItem("productContentObj")) || [];
+
+            let itemIndex = storageData.findIndex(item => item.title === itemTitle);
+
+            if (itemIndex !== -1) {
+                storageData.splice(itemIndex, 1);
+            }
+
+            sessionStorage.setItem("productContentObj", JSON.stringify(storageData));
+
+            parentElement.remove();
+
+            grandTotalFunc();
+        })
+
+    })
+
+}
+
+// For item remove
 
 // For total Price update
 
@@ -160,7 +202,26 @@ const totalPriceUpdate = (TB) => {
 
         total = 0;
     })
+    grandTotalFunc();
+}
+
+// For grand total price
+const grandTotalEle = document.querySelector(".grandTotal");
+
+const grandTotalFunc = () => {
+
+    const itemPriceEle = document.querySelectorAll(".item-sub-total");
+
+    let totalPrice = 0;
+
+    itemPriceEle.forEach((v) => {
+        totalPrice += parseFloat(v.innerText.replace("$", ""));
+    })
+
+    grandTotalEle.innerText = `$ ${totalPrice}`;
 
 }
+
+// For grand total price
 
 // For total Price update
